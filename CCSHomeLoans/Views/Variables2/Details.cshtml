@@ -1,0 +1,692 @@
+﻿@model CcsData.Models.Variable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Variable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Refi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Refi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefiCashout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefiCashout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RateTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RateTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MortgageProgramOption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MortgageProgramOption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RateType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RateType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SFR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SFR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Condo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Condo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufactured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufactured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultiUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultiUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TownHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TownHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LenderLogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LenderLogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Investment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Investment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondHome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondHome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdjustableTerms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdjustableTerms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNumberOfUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxNumberOfUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newTermInYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newTermInYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewInterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewInterestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OriginationPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OriginationPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteLenderPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuoteLenderPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuoteBorrowerPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuoteBorrowerPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LenderCreditPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LenderCreditPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleInusrancePercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleInusrancePercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntangibleTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntangibleTaxPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateTaxPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeedStampPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeedStampPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LenderTitleInsuranceFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LenderTitleInsuranceFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PestInspectionFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PestInspectionFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SurveyFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurveyFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxServiceFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxServiceFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloodCertificationFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloodCertificationFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LTV_Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LTV_Range)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxLTV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxLTV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinLTV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinLTV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLTV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLTV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxLoanAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxLoanAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxCashOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxCashOut)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditScoreRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditScoreRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOf30LateAllowedIn12Mo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOf30LateAllowedIn12Mo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOf30LateAllowedIn24Mo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOf30LateAllowedIn24Mo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxfrontDTI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxfrontDTI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxBacktDTI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxBacktDTI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bankruptcy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bankruptcy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Foreclosure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foreclosure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpfrontMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpfrontMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LenderPaidComp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LenderPaidComp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiDurationYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiDurationYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FHA_Upfront_MIP_Refi_percent_beforeJune1_2009)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FHA_Upfront_MIP_Refi_percent_beforeJune1_2009)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FHA_Upfront_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FHA_Upfront_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FHA_Monthly_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FHA_Monthly_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FHA_Monthly_MIP_Refi_percent_BeforeJune1_2009)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FHA_Monthly_MIP_Refi_percent_BeforeJune1_2009)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConventionalPmiFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConventionalPmiFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorZeroDown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactorZeroDown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactor5to10Down)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactor5to10Down)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactor10PlusDown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactor10PlusDown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorRefiNoCashout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactorRefiNoCashout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorWithCashout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactorWithCashout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorMobileHomeRefiNoCashout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaFundingFeeFactorMobileHomeRefiNoCashout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HazardInsurancePercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HazardInsurancePercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FloodInsurancePercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FloodInsurancePercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyTaxPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyTaxPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyInterestCalculation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailyInterestCalculation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowTaxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumofMonthstoEscrowTaxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowHazardInsurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumofMonthstoEscrowHazardInsurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowFloodInsurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumofMonthstoEscrowFloodInsurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcessingFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProcessingFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnderwritingFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnderwritingFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppraisalFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppraisalFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditReportFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditReportFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingEscrowFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClosingEscrowFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndorsementsReconveyanceFee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndorsementsReconveyanceFee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MortgageRecordingfee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MortgageRecordingfee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OptionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OptionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Variable_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

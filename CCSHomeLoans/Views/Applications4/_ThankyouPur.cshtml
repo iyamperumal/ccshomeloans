@@ -1,0 +1,31 @@
+﻿
+@model CcsWeb.Models.ThankyouRefi
+
+
+<section>
+    <div class="container">
+
+        @*<header>
+                <h2 class="styleColor">Thank you..</h2>
+            </header>*@
+
+        <h3 class="styleColor subtitle">Thank you</h3>
+        <article>
+            <p>
+                Thank you for submitting your loan application for @Model.LoanType. We are currently updating our loan engine and will have a member of our loan team call you and email you with the pre approval/loan savings summary shortly.
+            </p>
+            <p>
+                Please feel free to make direct contact with our loan agents at 1-800-565-2390 to answer any questions you have or to expedite your loan request.
+            </p>
+            <p>
+                Sincerely,<br />
+                CCS Home Loans
+
+            </p>
+
+        </article>
+        <div class="button-apply">
+            @Html.ActionLink("See your refi Options", "purchaseNow", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+        </div>
+    </div>
+</section>

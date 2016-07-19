@@ -1,0 +1,10 @@
+﻿@model Enum
+
+    @if (EnumHelper.IsValidForEnumHelper(ViewData.ModelMetadata))
+    {
+        @Html.EnumDropDownListFor(model => model, "Select", htmlAttributes: new { @class = "form-control input-lg" })
+    }
+    else
+    {
+        @Html.TextBoxFor(model => model, htmlAttributes: new { @class = "form-control TextColor" })
+    }

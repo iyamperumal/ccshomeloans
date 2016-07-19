@@ -1,0 +1,112 @@
+﻿namespace CcsData.Models
+{
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
+    public enum UsStateEnum
+    {
+        [Display(Name="Alaska")]
+        AK = 2,
+        [Display(Name="Alabama")]
+        AL = 1,
+        [Display(Name="Arkansas")]
+        AR = 5,
+        [Display(Name="Arizona")]
+        AZ = 4,
+        [Display(Name="California")]
+        CA = 6,
+        [Display(Name="Colorado")]
+        CO = 8,
+        [Display(Name="Connecticut")]
+        CT = 9,
+        [Display(Name="Washington DC")]
+        DC = 11,
+        [Display(Name="Delaware")]
+        DE = 10,
+        [Display(Name="Florida")]
+        FL = 12,
+        [Display(Name="Georgia")]
+        GA = 13,
+        [Display(Name="Hawaii")]
+        HI = 15,
+        [Display(Name="Iowa")]
+        IA = 0x13,
+        [Display(Name="Idaho")]
+        ID = 0x10,
+        [Display(Name="Illinois")]
+        IL = 0x11,
+        [Display(Name="Indiana")]
+        IN = 0x12,
+        [Display(Name="Kansas")]
+        KS = 20,
+        [Display(Name="Kentucky")]
+        KY = 0x15,
+        [Display(Name="Louisiana")]
+        LA = 0x16,
+        [Display(Name="Massachusetts")]
+        MA = 0x19,
+        [Display(Name="Maryland")]
+        MD = 0x18,
+        [Display(Name="Maine")]
+        ME = 0x17,
+        [Display(Name="Michigan")]
+        MI = 0x1a,
+        [Display(Name="Minnesota")]
+        MN = 0x1b,
+        [Display(Name="Missouri")]
+        MO = 0x1d,
+        [Display(Name="Mississippi")]
+        MS = 0x1c,
+        [Display(Name="Montana")]
+        MT = 30,
+        [Display(Name="North Carolina")]
+        NC = 0x25,
+        [Display(Name="North Dakota")]
+        ND = 0x26,
+        [Display(Name="Nebraska")]
+        NE = 0x1f,
+        [Display(Name="New Hampshire")]
+        NH = 0x21,
+        [Display(Name="New Jersey")]
+        NJ = 0x22,
+        [Display(Name="New Mexico")]
+        NM = 0x23,
+        [Display(Name="Nevada")]
+        NV = 0x20,
+        [Display(Name="New York")]
+        NY = 0x24,
+        [Display(Name="Ohio")]
+        OH = 0x27,
+        [Display(Name="Oklahoma")]
+        OK = 40,
+        [Display(Name="Oregon")]
+        OR = 0x29,
+        [Display(Name="Pennsylvania")]
+        PA = 0x2a,
+        [Display(Name="Rhode Island")]
+        RI = 0x2c,
+        [Display(Name="South Carolina")]
+        SC = 0x2d,
+        [Display(Name="South Dakota")]
+        SD = 0x2e,
+        [Display(Name="Tennessee")]
+        TN = 0x2f,
+        [Display(Name="Texas")]
+        TX = 0x30,
+        [Display(Name="Utah")]
+        UT = 0x31,
+        [Display(Name="Virginia")]
+        VA = 0x33,
+        [Display(Name="Vermont")]
+        VT = 50,
+        [Display(Name="Washington")]
+        WA = 0x35,
+        [Display(Name="Wisconsin")]
+        WI = 0x37,
+        [Display(Name="West Virginia")]
+        WV = 0x36,
+        [Display(Name="Wyoming")]
+        WY = 0x38
+    }
+}
+

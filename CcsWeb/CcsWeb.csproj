@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5ED8B9F-020E-44BE-8038-F049AFE57953}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CcsWeb</RootNamespace>
+    <AssemblyName>CcsWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\CCSHomeLoans\bin\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditRequestLib">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\CreditRequestLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="LiquidTechnologies.Runtime.Net45">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\LiquidTechnologies.Runtime.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mvc.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RateSheetRebateProcessor">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\RateSheetRebateProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="RateTableVariables">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\RateTableVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="ResponseLib">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\ResponseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CCSHomeLoans\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\..\..\Code\Backup\12-July-2016\CcsWeb\bin\Debug\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationUserManager.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="Areas\Realty\RealtyAreaRegistration.cs" />
+    <Compile Include="BundleConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddressesController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\App1Controller.cs" />
+    <Compile Include="Controllers\ApplicantsController.cs" />
+    <Compile Include="Controllers\Applications4Controller.cs" />
+    <Compile Include="Controllers\Applications5Controller.cs" />
+    <Compile Include="Controllers\Applications8Controller.cs" />
+    <Compile Include="Controllers\Applications9Controller.cs" />
+    <Compile Include="Controllers\ApplicationsController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\CountyLoanLimitConvsController.cs" />
+    <Compile Include="Controllers\CountyLoanLimitFHAsController.cs" />
+    <Compile Include="Controllers\CountyLoanLimitsController.cs" />
+    <Compile Include="Controllers\CountyLoanLimitVAsController.cs" />
+    <Compile Include="Controllers\CreditLiabilitiesController.cs" />
+    <Compile Include="Controllers\CreditMortgagesController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\diposetory.cs" />
+    <Compile Include="Controllers\DocFilesController.cs" />
+    <Compile Include="Controllers\DocumentsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoanProgramsController.cs" />
+    <Compile Include="Controllers\Mortgages1Controller.cs" />
+    <Compile Include="Controllers\RealtorsController.cs" />
+    <Compile Include="Controllers\RequestCredsController.cs" />
+    <Compile Include="Controllers\TestimonialsController.cs" />
+    <Compile Include="Controllers\UIController.cs" />
+    <Compile Include="Controllers\UsdaCountiesAndIncomesController.cs" />
+    <Compile Include="Controllers\Util.cs" />
+    <Compile Include="Controllers\UtilBack.cs" />
+    <Compile Include="Controllers\Variables1Controller.cs" />
+    <Compile Include="Controllers\Variables2Controller.cs" />
+    <Compile Include="Controllers\VariablesController.cs" />
+    <Compile Include="DataContexts\CcsLocalDbContext.cs" />
+    <Compile Include="DataContexts\CcsRemoteDbContext.cs" />
+    <Compile Include="DataContexts\LocalMigrations\Configuration.cs" />
+    <Compile Include="DataContexts\RemoteMigrations\Configuration.cs" />
+    <Compile Include="DataContexts\VpsContext.cs" />
+    <Compile Include="DataContexts\VpsMigrations\Configuration.cs" />
+    <Compile Include="DataMigration\LeadFile.cs" />
+    <Compile Include="DataMigration\PopList.cs" />
+    <Compile Include="EmailService.cs" />
+    <Compile Include="FilterConfig.cs" />
+    <Compile Include="Helpers\RequiresSSL.cs" />
+    <Compile Include="Helpers\Util.cs" />
+    <Compile Include="Infrastructure\Tasks\IRunAtInit.cs" />
+    <Compile Include="MailersBak\IUserMailer.cs" />
+    <Compile Include="MailersBak\UserMailer.cs" />
+    <Compile Include="Mailers\IUserMailer.cs" />
+    <Compile Include="Mailers\UserMailer.cs" />
+    <Compile Include="Models\AppEmailModel.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\currencyBinder.cs" />
+    <Compile Include="Models\CurrencyVal.cs" />
+    <Compile Include="Models\DocFileVM.cs" />
+    <Compile Include="Models\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Models\ExternalLoginListViewModel.cs" />
+    <Compile Include="Models\ForgotPasswordViewModel.cs" />
+    <Compile Include="Models\HelpIcon.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\ManageUserViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\ThankyouApply.cs" />
+    <Compile Include="Models\ThankyouRefi.cs" />
+    <Compile Include="MvcApplication.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteConfig.cs" />
+    <Compile Include="SmsService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="WebApiConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CcsData\CcsData.csproj">
+      <Project>{19cf1cef-8e30-4923-aaed-7830cb0617d2}</Project>
+      <Name>CcsData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,43 @@
+﻿
+<!-- login button -->
+<div id="loginBtn" class="topBtn pointer">
+    <i class="fa fa-angle-right"></i> Log in
+
+    <div id="loginDD">
+        <!-- login dropdown -->
+        <h4><i class="fa fa-users"></i> Members</h4>
+        <hr />
+        @*<form method="post" action="#">*@
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <span class="form-group">
+                <i class="fa fa-user"></i>
+                <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" placeholder="User Name" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+            </span>
+
+            <span class="form-group">
+                <i class="fa fa-key"></i>
+                <input data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="Password" type="password">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </span>
+
+            <span class="form-group">
+                @*<button class="btn btn-default">LOG IN</button>*@
+                <label class="label_check" for="rememberMe">
+                    <input data-val="true" data-val-required="The Remember me? field is required." type="checkbox" name="rememberMe" id="rememberMe" value="true" checked="checked" /> remember me
+                </label>
+            </span>
+            <span class="form-group">
+                <button class="btn btn-default">LOG IN</button>
+            </span>
+        }
+
+        <!-- password forgot -->
+        <a class="forgot_passowrd" href="password.html">forgot your password?</a>
+
+    </div><!-- /login dropdown -->
+</div>
+<!-- /login -->
+

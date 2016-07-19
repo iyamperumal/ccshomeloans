@@ -1,0 +1,172 @@
+﻿@model IEnumerable<CcsData.Models.Mortgage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageApplicant.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortageType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyPayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PymtIncludesTaxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PymtIncludesHomeownersInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearlyPropertyTaxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearlyHomeInsurancePayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyMortgageInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterestRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterestRateType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaturityDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LanderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrePaymentPenalty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BalloonPayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BalloonPaymentDueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearlyMortgageInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyPropertyTaxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageApplicant.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortageType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyPayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PymtIncludesTaxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PymtIncludesHomeownersInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearlyPropertyTaxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearlyHomeInsurancePayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyMortgageInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterestRateType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Term)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaturityDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LanderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OriginationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OriginalAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrePaymentPenalty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BalloonPayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BalloonPaymentDueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearlyMortgageInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyPropertyTaxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Mortgage_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Mortgage_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Mortgage_Id })
+        </td>
+    </tr>
+}
+
+</table>

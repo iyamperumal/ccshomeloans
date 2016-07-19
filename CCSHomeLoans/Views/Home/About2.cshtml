@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "About2";
+}
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background: url('/content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                 <br /><span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>CCS vs LENDINGTREE</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>CCS vs LendingTree</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- CCS vs LendingTree -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Why Use CCS Mortgage Loans vs Lending Tree?</h2>
+            </header>
+
+            <h3 class="subtitle">CCS versus Lending Tree</h3>
+            <article>
+                <p>
+                    LendingTree does not issue Mortgage Home Loans. They take your information and sell it to multiple mortgage company's that will then consistently call you and email in attempt to take a Full Mortgage Application;.
+                </p>
+
+                <p>
+                    Because LendingTree is not the Lender, the loan quotes they provide you with are only rough estimates that do not fully account for your home value, actual credit score, and verified income requirements.
+                    Therefore, in order to truly shop multiple lenders for the best rate and or closing cost you must make full loan applications to multiple Mortgage Lenders.
+                </p>
+            </article>
+
+            <h3 class="subtitle">CCS Solution</h3>
+            <article>
+                <p>
+                    Unlike LendingTree, we actually lend through multiple mortgage lenders. This means that we take one application and shop all of our mortgage lenders for the best terms and present these options to you. From Application to closing we handle everything. You will not have multiple mortgage lenders harassing you.
+                </p>
+            </article>
+        </div>
+    </section>
+
+</div>
+

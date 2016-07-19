@@ -1,0 +1,312 @@
+﻿<!doctype html>
+<html ng-app="ccsApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.Title - Ccs-Home-Loans</title>
+    <meta name="description" content="Jacksonville Mortgage Home Loans providing NO FEE Mortgage Home Loans on purchase loans and mortgage refinance loans. Build your loan, shop your loan and close your mortgage home loan with one company from start to finish." />
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="assets/plugins/lt-ie9/html5.js"></script>
+        <script type="text/javascript" src="assets/plugins/lt-ie9/respond.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/lt-ie9/excanvas.compiled.js"></script>
+    <![endif]-->
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Dosis:300,400" rel="stylesheet" type="text/css">
+
+    <!-- CORE CSS FRAMEWORK -->
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+    <!-- PLUGINS -->
+    <link href="/Content/prettyPhoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/jquery-bxslider/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS TEMPLATE -->
+    <link href="/Content/framework.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/layout.css" rel="stylesheet" type="text/css" />
+
+    <link href="/Content/color/default.css" rel="stylesheet" type="text/css" />
+
+    <!-- ICONS -->
+    <link rel="shortcut icon" href="/Content/images/icon.png" type="image/x-icon" />
+    <link rel="icon" href="/Content/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/Content/images/favicon.ico" type="image/x-icon" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+</head>
+<body>
+
+
+    <header id="header">
+
+        <div class="nav-top">
+            <div class="container">
+
+                <!--
+                    my account button
+                    VISIBLE ONLY IF USER LOGGED IN
+
+                    <a href="#" class="topBtn"><i class="fa fa-angle-right"></i> My Account</a>
+                -->
+                <!-- login button -->
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.Partial("_User")
+                }
+                else
+                {
+                    @Html.Partial("_Login1")
+                    @Html.Partial("_Register1")
+                }
+
+
+                <!-- contact button -->
+                @*<a href="../Home/Contact" class="topBtn"><i class="fa fa-angle-right"></i> Contact Us</a>*@
+                @Html.ActionLink("Contact Us", "Create", "Contacts", null, new { @class = "topBtn" })
+
+                <!-- phone -->
+                <span class="phone"><i class="fa fa-phone"></i> 1-800-565-2390</span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="logo" href="../" title="Mortgage Home Loans">
+                <img class="logo_pc" alt="Mortgage Home Loans" src="../../Content/images/logo_pc.png" width="181" height="87" />
+                <img class="logo_mobile" alt="Mortgage Home Loans" src="../../Content/images/logo_mobile.png" height="63" />
+            </a>
+
+            <!-- MOBILE MENU -->
+            <button id="mobileMenu" class="fa fa-bars" type="button"></button>
+
+            <!-- navigation -->
+            <nav>
+                <ul class="nav nav-pills nav-main" id="mainMenu">
+                    <li class="@ViewBag.HomeClass">
+                        <a href="../">Home</a>
+                    </li>
+                    <li class="@ViewBag.ApplyOnNowClass">@Html.ActionLink("Apply Now", "App1", "Applications4")</li>
+                    @*<li class="@ViewBag.ApplyNowClass">@Html.ActionLink("Apply Now", "Index", "Application")</li>*@
+                    <li class="dropdown @ViewBag.AboutClass">
+                        <a class="dropdown-toggle" href="../home/about">
+                            About Us
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Why Use CCS", "About1", "Home")</li>
+                            <li>@Html.ActionLink("CCS vs LendingTree", "About2", "Home")</li>
+                            <li>@Html.ActionLink("CCS vs Quicken Loans", "About3", "Home")</li>
+                            <li>@Html.ActionLink("Our History in Mortgage Lending", "About4", "Home")</li>
+                            <li>@Html.ActionLink("Licensing", "About5", "Home")</li>
+                            <li>@Html.ActionLink("Our Lenders", "About6", "Home")</li>
+                            <li>@Html.ActionLink("Login page", "Login", "Account")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown @ViewBag.LoanTypesClass">
+                        <a class="dropdown-toggle" href="../home/LoanTypes">
+                            Loan Types
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Debt Consolidation Mortgage Options", "DebtConsolidation", "Home")</li>
+                            <li>@Html.ActionLink("Rate & Term Mortgage Refinance", "RateAndTerm", "Home")</li>
+                            <li>@Html.ActionLink("Cash Out Mortgage Refinance", "cashout", "Home")</li>
+                            <li>@Html.ActionLink("Purchase Mortgage Loans", "Purchase", "Home")</li>
+                            <li>@Html.ActionLink("Loan Type Cheat Sheet", "CheatSheet", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown @ViewBag.loanProgramsClass">
+                        <a class="dropdown-toggle" href="../home/Loanprograms">
+                            Loan Programs
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Coventional Mortgage Loans", "Conventional", "Home")</li>
+                            <li>@Html.ActionLink("FHA Mortgage Loans", "FHA", "Home")</li>
+                            <li>@Html.ActionLink("USRDA Rural Loans", "USRDA", "Home")</li>
+                            <li>@Html.ActionLink("Non Qualified Mortgage Loans", "NonQualifiedMortgage", "Home")</li>
+                            <li>@Html.ActionLink("Jumbo Mortgage Loans", "JumboMortgage", "Home")</li>
+                            <li>@Html.ActionLink("Adjustable Rates Mortgage Loans", "AdjustableMortgage", "Home")</li>
+                            <li>@Html.ActionLink("Fixed Rate Mortgage Loans", "FixedMortgage", "Home")</li>
+                        </ul>
+                    </li>
+
+                    @*<li class="@ViewBag.LearnMoreClass">@Html.ActionLink("Learn More", "LearnMore", "Home")</li>*@
+
+                    <li>@Html.ActionLink("Testimonials", "Testimonials", "Home")</li>
+                    
+                    @*<li>@Html.ActionLink("Vars", "index", "variables")</li>*@
+                    
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <div id="wrapper">
+
+        <!-- PAGE TITLE -->
+        <section class="page-title" style="background:url('/Content/images/page-title.jpg') center top;">
+            <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+            <span class="raster hover"><!-- raster --></span>
+
+            <div class="container">
+
+                <!-- PAGE TITLE -->
+                <header>
+                    <h1>@ViewBag.HeaderText</h1>
+                    <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+                </header>
+
+                <!-- BREADCRUMBS - PAGE LOCATOR -->
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Apply Now</li>
+                    <li>Step 1</li>
+                </ol>
+
+            </div>
+        </section>
+        <!-- /PAGE TITLE -->
+        <!-- PAGE CONTENT -->
+        <section class="page-content">
+            <div class="container">
+                <article>
+                    <div class="progress">
+                        <div id="appProg" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 10%; margin-bottom: 10px"></div>
+                    </div>
+
+                    
+
+                    <div id="app">
+                        @RenderBody()
+                    </div>
+                    <div class="text-center" id="waiting" style="display:none; margin-top: 100px">
+                        <img class="img-responsive center-block" src="../../Content/images/loading240.gif" alt="" />
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <!-- /PAGE CONTENT -->
+        <!-- PHONE BAR -->
+        <section class="phone-bar">
+            <div class="container">
+
+                <!-- SMALL DESC -->
+                <div class="desc hidden-xs">
+                    <!-- hidden-xs = hide if width < 768px -->
+                    <h2>Better Business Bureau says A+</h2>
+                    <p class="grey">• Since 1998 • Over 5000 Clients •</p>
+                </div>
+
+                <!-- APPLY BUTTON -->
+                <div class="button-apply">
+                    <h1>1-800-565-2390</h1>
+                </div>
+
+            </div>
+        </section>
+        <!-- /PHONE BAR -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <!-- copyright , scrollTo Top -->
+        <div class="footer-bar">
+            <div class="container">
+                <span class="copyright">Copyright &copy; CCS Home Loans, LLC . All Rights Reserved.</span>
+                <a class="toTop" href="#header">BACK TO TOP <i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+        </div>
+        <!-- copyright , scrollTo Top -->
+        <!-- footer content -->
+        <div class="footer-content">
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- FOOTER CONTACT INFO -->
+                    <div class="column col-md-4">
+                        <h4>CONTACT</h4>
+
+                        <p class="contact-desc font-opensans animate_from_left">
+                            Have questions? We are always happy to help.
+                            Please call us or email us
+                        </p>
+                        <address class="font-opensans">
+                            <ul>
+                                <li class="footer-sprite address animate_from_left">
+                                    Corporate Office<br />
+                                    2814 Spanish Cove Trail<br />
+                                    Jacksonville, Florida 32257<br />
+                                </li>
+                                <li class="footer-sprite phone animate_from_left">
+                                    Phone: 1-800-565-2390
+                                </li>
+                                <li class="footer-sprite email animate_from_left">
+                                    <a href="mailto:info@ccshomeloans.com">info@ccshomeloans.com</a>
+                                </li>
+                            </ul>
+                        </address>
+
+                    </div>
+                    <!-- /FOOTER CONTACT INFO -->
+                    <!-- FOOTER LOGO -->
+                    <div class="column logo col-md-4 text-center">
+                        <div class="logo-content">
+                            <h4 class="animate_from_top">CONSUMER CREDIT SERVICES</h4>
+                            <img class="animate_fade_in" src="/Content/images/logo.png" width="200" alt="" />
+                        </div>
+                    </div>
+                    <!-- /FOOTER LOGO -->
+                    <!-- FOOTER LATEST POSTS -->
+                    <div class="column testimonials col-md-4 text-right">
+                        <h4>TESTIMONIALS</h4>
+
+                        <div class="post-item animate_from_right">
+                            <div class="font-opensans">
+                                <p style="text-align: left">
+                                    We saved $104,993.50 in interest with CCS Home Loans. Unlike other sites, this company has multiple lenders that provide below average interest rates. From start to finish they handled everything!
+                                </p>
+                                <p>T. Gneicht     Jacksonville, FL</p>
+                            </div>
+                        </div>
+                        <div class="post-item animate_from_right">
+                            <div class="font-opensans">
+                                <p style="text-align: left">No better offer could be found. We saved $466.67 a month and wiped out a total of $ 120,054.00 in interest from our old loan.  They found us the best lenders offer and closed us within 3 weeks! Love them!</p>
+                                <p>M. Revenaugh  Jacksonville, FL</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /FOOTER LATEST POSTS -->
+
+                </div>
+
+            </div>
+        </div>
+        <!-- footer content -->
+
+    </footer>
+    <!-- /FOOTER -->
+    <!-- PACKED PLUGINS -->
+    <script type="text/javascript" src="/Scripts/plugin_pack.js"></script>
+    @*<script src="~/Scripts/angular.min.js"></script>*@
+    @*<script src="~/Scripts/ccsApp.js"></script>*@
+    @*<script src="~/Scripts/ccs.js"></script>*@
+    <!-- js scripts -->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script async type="text/javascript" src="/Scripts/scripts.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>
+

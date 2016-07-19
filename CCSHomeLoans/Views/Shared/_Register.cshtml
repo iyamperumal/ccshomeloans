@@ -1,0 +1,74 @@
+﻿@model CcsWeb.Models.RegisterViewModel
+
+<div id="registerBtn" class="topBtn pointer">
+    <i class="fa fa-angle-right"></i> Register
+
+    <div id="registerDD">
+        <!-- login dropdown -->
+        <h4><i class="fa fa-users"></i> Members</h4>
+
+        @using (Html.BeginForm("Register", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @*<h4><i class="fa fa-users"></i> Members</h4>*@
+            <hr />
+            //Html.ValidationSummary(false,"", new { @class = "text-danger" })
+            <span class="form-group">
+                @*Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-envelope"></i>
+                @Html.TextBoxFor(m => m.EmailReg, new { @placeholder = "Emaile" })
+                @Html.ValidationMessageFor(m => m.EmailReg, "", new { @class = "text-danger" })
+
+            </span>
+            <span class="form-group">
+                @*Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-arrow-circle-o-right"></i>
+                @Html.TextBoxFor(m => m.FirstNameReg, new { @placeholder = "First Name" })
+                @Html.ValidationMessageFor(m => m.FirstNameReg, "", new { @class = "text-danger" })
+
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-arrow-circle-o-right"></i>
+                @Html.TextBoxFor(m => m.LastNameReg, new { @placeholder = "Last Name" })
+                @Html.ValidationMessageFor(m => m.LastNameReg, "", new { @class = "text-danger" })
+
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-key"></i>
+                @Html.PasswordFor(m => m.PasswordReg, new { @placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.PasswordReg, "", new { @class = "text-danger" })
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-key"></i>
+                @Html.PasswordFor(m => m.ConfirmPasswordReg, new { @placeholder = "Confirm Password" })
+                @Html.ValidationMessageFor(m => m.PasswordReg, "", new { @class = "text-danger" })
+
+            </span>
+
+            <span class="form-group">
+                <button class="btn btn-default">Register</button>
+            </span>
+            <br />
+            <span>
+                @*Html.ActionLink("Register as a new user", "Register")*@
+                <a href="/Account/login">Already registered login here</a>
+            </span>
+
+            @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+        }
+
+        <!-- password forgot -->
+        @*<a class="forgot_passowrd" href="password.html">forgot your password?</a>*@
+
+    </div><!-- /login dropdown -->
+
+</div>

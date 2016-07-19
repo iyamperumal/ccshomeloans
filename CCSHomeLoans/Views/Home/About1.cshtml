@@ -1,0 +1,61 @@
+﻿@*@Html.Partial("_TopPic")*@
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background:url('/Content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                 <br /><span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>WHY USE CCS?</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+                <li>Why Use CCS?</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- Why Use CCS? -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Why Use Consumer Credit Services?</h2>
+            </header>
+
+            <h3 class="subtitle">The Consumer Credit Services Commitment to Our Clients</h3>
+            <article>
+                <p>
+                    To provide consumers a simplified mortgage lending experiences that offers all the advantages of shopping multiple mortgage lenders and loan products, while maintaining a single accountable contact from application to closing.
+                </p>
+                <p>
+                    To only promote and offer mortgage home loan products that provide true tanigible financial benefits to the borrowers.
+                </p>
+                <p>
+                    We have Closed over 5000 mortgage loans, while maintaining an A + Rating with the Better Business Bureau. We have never disappointed our clients.
+                </p>
+                <p>
+                    Its simple service. We keep the goals, needs and concerns of each of our clients as the most important determinant of our short term and long term success.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+</div>

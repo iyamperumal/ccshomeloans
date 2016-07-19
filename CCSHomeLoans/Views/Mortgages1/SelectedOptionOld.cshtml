@@ -1,0 +1,79 @@
+﻿@model CcsData.ViewModels.ApplicantVm
+@{
+    ViewBag.Title = "RifiOption";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+<div class="col-md-5">
+    @*<form class="form-wrapper" action="signup.htm" role="form">*@
+    @using (Html.BeginForm("SelectedOption", "Mortgages1", FormMethod.Post, new { @class = "form-wrapper", role = "form" }))
+    {
+        <h4 class="title-divider"><span>Update Contact Info</span> <small>Please update and verify you info.</small></h4>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FullName, new { @class = "" })
+            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control placeholder" })
+            @Html.ValidationMessageFor(model => model.FullName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CellPhone, new { @class = "" })
+            @Html.TextBoxFor(model => model.CellPhone, new { @class = "form-control placeholder" })
+            @Html.ValidationMessageFor(model => model.CellPhone)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HomePhone, new { @class = "" })
+            @Html.TextBoxFor(model => model.HomePhone, new { @class = "form-control placeholder" })
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmailAddress, new { @class = "" })
+            @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control placeholder" })
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+
+        <div class="form-group">
+            <label class="" for="signup-password">Best Time To Call</label>
+            @Html.TextBoxFor(model => model.CallBackTime, new { @class = "form-control placeholder" })
+            @Html.ValidationMessageFor(model => model.CallBackTime)
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Continue</button>
+    }
+</div>
+
+
+
+<div class="col-md-5 col-md-offset-2 ng-cloak" ng-controller="ccsMinApp">
+
+    <div class="col-md-10 price-table {{option.Hilited}}">
+
+        <h3><strong>$ {{option.LoanAmount | number:2}}</strong></h3>
+        <p>
+            <strong>
+                ${{option.NewMonthlyPaymentPrincipalInterest | number:2}}
+            </strong>
+            <span>PER MONTH</span>
+        </p>
+        <ul>
+            <li>Loan Type: {{option.OptionName}}</li>
+            <li>Term: {{option.TermInYears}}</li>
+            <li>Payment: $ {{option.NewMonthlyPaymentPrincipalInterest}}</li>
+            <li><strong>Mtg. Amount: $ {{option.LoanAmount}}</strong></li>
+            <li>Payment Savings: $ {{option.MonthlySavings}}</li>
+            <li>Interest Saved: {{option.TotalSavingsFromOldMortgageToNewMortgage}}</li>
+            <li>Months To Break Even: {{option.CostSavingsBreakEvenAnalysis}}</li>
+            <li hidden="hidden">{{option.VarNum}}</li>
+        </ul>
+        <label class=" label label-success">Selected</label>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/ccsApp.js")
+    @Scripts.Render("~/Scripts/ccsMinAppController.js")
+}

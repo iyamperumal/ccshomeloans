@@ -1,0 +1,360 @@
+﻿@model IEnumerable<CcsData.Models.Applicant>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Credit.HowOldAreJudmentAndCollections)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeadData.Criteria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanStage.LoanStage_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionSelected.PreparedFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Realtor.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rep.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondMortgage.MortgageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seller.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VariableCust.MortgageProgramOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanTypeRequested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Suffix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditScoreEstimate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashOutAmountRequested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashOutType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComputedCashOutAmountAvailable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalBalanceOfDebtToConsolidate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMonthlyAmountOfDebtPaymentsToConsolidate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CareOfName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HomePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CellPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoNotCall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SocialSecurityNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SocialSecurity4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearsInSchool)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfDependents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallBackDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallBackTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimesMailed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BatchNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditResolicitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LTVResolicitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DTIResolicitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OptionNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disposition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LenderRefuseReason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientRefuseReason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditRatingReason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiteRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerServiceRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Veteran)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Have2ndMortgage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayOff2ndMortgage)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Credit.HowOldAreJudmentAndCollections)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LeadData.Criteria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoanStage.LoanStage_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OptionSelected.PreparedFor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Realtor.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rep.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecondMortgage.MortgageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Seller.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VariableCust.MortgageProgramOption)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoanTypeRequested)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Suffix)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditScoreEstimate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CashOutAmountRequested)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CashOutType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComputedCashOutAmountAvailable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalBalanceOfDebtToConsolidate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalMonthlyAmountOfDebtPaymentsToConsolidate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CareOfName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomePhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CellPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DoNotCall)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaritalStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SocialSecurityNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SocialSecurity4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YearsInSchool)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfDependents)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ages)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClientApplicationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CallBackDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CallBackTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimesMailed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BatchNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditResolicitDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LTVResolicitDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DTIResolicitDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OptionNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Disposition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LenderRefuseReason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClientRefuseReason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditRatingReason)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SiteRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerServiceRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Veteran)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Have2ndMortgage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayOff2ndMortgage)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Applicant_Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Applicant_Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Applicant_Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

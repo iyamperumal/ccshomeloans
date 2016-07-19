@@ -1,0 +1,70 @@
+﻿<div id="registerBtn" class="topBtn pointer">
+    <i class="fa fa-angle-right"></i> Register
+
+    <div id="registerDD">
+        <!-- login dropdown -->
+        <h4><i class="fa fa-users"></i> Members</h4>
+
+        @using (Html.BeginForm("Register", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <hr />
+            <span class="form-group">
+                <i class="fa fa-envelope"></i>
+                <input data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="EmailReg" name="EmailReg" placeholder="Email" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+
+            </span>
+            <span class="form-group">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <input data-val="true" data-val-required="The First Name field is required." id="FirstNameReg" name="FirstNameReg" placeholder="First Name" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <input data-val="true" data-val-required="The Last Name field is required." id="LastNameReg" name="LastNameReg" placeholder="Last Name" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-key"></i>
+                <input data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="PasswordReg" name="PasswordReg" placeholder="Password" type="password">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Passwordr" data-valmsg-replace="true"></span>
+            </span>
+
+            <span class="form-group">
+                @*Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                <i class="fa fa-key"></i>
+                <input data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Passwordr" id="ConfirmPasswordReg" name="ConfirmPasswordReg" placeholder="Confirm Password" type="password">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Passwordr" data-valmsg-replace="true"></span>
+
+            </span>
+
+            <span class="form-group">
+                <button class="btn btn-default">Register</button>
+            </span>
+            <br />
+            <span>
+                @*Html.ActionLink("Register as a new user", "Register")*@
+                <a href="/Account/login"><small>Already registered login here</small></a>
+            </span>
+
+            @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+        }
+
+        <!-- password forgot -->
+        @*<a class="forgot_passowrd" href="password.html">forgot your password?</a>*@
+
+    </div><!-- /login dropdown -->
+
+</div>
+

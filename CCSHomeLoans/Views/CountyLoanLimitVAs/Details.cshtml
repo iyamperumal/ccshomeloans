@@ -1,0 +1,43 @@
+﻿@model CcsData.Models.CountyLoanLimitVA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CountyLoanLimitVA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanLimit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CountyLoanLimitVA_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

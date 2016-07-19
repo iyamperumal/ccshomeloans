@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNet.Identity
+
+<div id="userBtn" class="topBtn pointer">
+    <i class="fa fa-angle-right"></i> @User.Identity.GetUserName()
+
+    <div id="userDD">
+        <!-- login dropdown -->
+        <h4><i class="fa fa-user"></i>Account</h4>
+        <hr />
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <span class="form-group">
+                <i class="fa fa-hand-o-right"></i>
+                @*<input type="text" name="text_box" value="" placeholder="User Name" />*@
+                <a href="/Account/Manage">Manage</a>
+            </span>
+            <hr />
+            <span class="form-group">
+                <i class="fa fa-sign-out"></i>
+                @*<input type="text" name="text_box" value="" placeholder="User Name" />*@
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+            </span>
+            <hr />
+            <span class="form-group">
+                <i class="fa fa-sign-out"></i>
+                @*<input type="text" name="text_box" value="" placeholder="User Name" />*@
+                @Html.ActionLink("My Options", "MyOptions", "mortgages1")
+            </span>
+
+        }
+
+
+
+        <!-- password forgot -->
+        <a class="forgot_passowrd" href="password.html">forgot your password?</a>
+
+    </div><!-- /login dropdown -->
+</div>

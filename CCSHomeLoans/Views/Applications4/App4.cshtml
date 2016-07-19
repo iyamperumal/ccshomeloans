@@ -1,0 +1,167 @@
+﻿@model CcsData.ViewModels.App4
+
+@{
+    ViewBag.Title = "App4";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>App4</h2>
+
+<h2 class="subtitle">For Consumers by Consumers</h2>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+</div>
+<span class="apply_percent_info pull-left">Progress</span>
+<span class="apply_percent_info pull-right">90%</span>
+
+<div class="spacer"><!-- 60px spacer --></div>
+
+<article id="app4">
+    @using (Ajax.BeginForm("App4", "Applications4", null, new AjaxOptions { HttpMethod = "post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "app", OnSuccess = "app4Success" }, new { @class = "form-horizontal bigForm" }))
+    {
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstMortgageOriginationDate, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.FirstMortgageOriginationDate, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.FirstMortgageOriginationDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstMortgagePayment, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.FirstMortgagePayment, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.FirstMortgagePayment, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label style="color: #f00" class="col-sm-4 control-label"><strong>Payment Includes</strong></label>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12" style="">
+                <div class=" col-md-2 col-sm-offset-1 col-md-offset-4">
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PymtIncludesMI, htmlAttributes: new { @class = "control-label col-xs-6 col-sm-3" })
+                        <div class="col-sm-1">
+                            <div class="checkbox">                          
+                                @*Html.EditorFor(model => model.PymtIncludesMI, new { htmlAttributes = new { @onchange = "MortgageInsChk()"}})*@
+                                @Html.CheckBoxFor(model => model.PymtIncludesMI, new {onchange = "MortgageInsChk()" })
+                                @Html.ValidationMessageFor(model => model.PymtIncludesMI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PymtIncludesPropTaxes, htmlAttributes: new { @class = "control-label col-xs-6 col-sm-3" })
+                        <div class="col-sm-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.PymtIncludesPropTaxes)
+                                @Html.ValidationMessageFor(model => model.PymtIncludesPropTaxes, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HoaDuesFees, htmlAttributes: new { @class = "control-label col-xs-6 col-sm-3" })
+                        <div class="col-sm-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.HoaDuesFees)
+                                @Html.ValidationMessageFor(model => model.HoaDuesFees, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-offset-1 col-md-offset-0">
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PymtIncludesHomeownersInsurance, htmlAttributes: new { @class = "control-label col-xs-6 col-sm-3" })
+                        <div class="col-sm-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.PymtIncludesHomeownersInsurance)
+                                @Html.ValidationMessageFor(model => model.PymtIncludesHomeownersInsurance, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PymtIncludesMone, htmlAttributes: new { @class = "control-label col-xs-6 col-sm-3" })
+                        <div class="col-sm-1">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.PymtIncludesMone)
+                                @Html.ValidationMessageFor(model => model.PymtIncludesMone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AnnualPropertyTaxes, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.AnnualPropertyTaxes, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.AnnualPropertyTaxes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AnnualHomeownersInsur, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.AnnualHomeownersInsur, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.AnnualHomeownersInsur, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+    <div id="MonthlyMortgageInsurId" style="display:none" class="form-group">
+        @Html.LabelFor(model => model.MonthlyMortgageInsur, htmlAttributes: new { @class = "control-label col-sm-4" })
+        <div class="col-md-8">
+            @Html.EditorFor(model => model.MonthlyMortgageInsur, new { htmlAttributes = new { @class = "form-control" } })
+            <div class="col-sm-12">
+                @Html.ValidationMessageFor(model => model.MonthlyMortgageInsur, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AnnualHomeownersAssocDues, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.AnnualHomeownersAssocDues, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.AnnualHomeownersAssocDues, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                <div class="col-sm-6">
+                    <button id="prevbtn" type="submit" name="BtnPrevious" class="cancel btn btn-default btn-lg">Back <i class="fa fa-angle-double-left"></i></button>
+                    <button id="nextbtn" type="submit" name="BtnNext" class="btn btn-primary btn-lg">Next <i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    }
+</article>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/ccs.js"></script>
+}

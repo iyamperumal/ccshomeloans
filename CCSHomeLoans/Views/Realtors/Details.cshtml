@@ -1,0 +1,90 @@
+﻿@model CcsData.Models.Realtor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Realtor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CellNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CellNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaxNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaxNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageFile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Realtor_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

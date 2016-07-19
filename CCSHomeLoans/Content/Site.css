@@ -1,0 +1,91 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*--------------------------------------------------------*/
+
+
+div.price-table {
+	background:#fafafa;
+	margin:30px 0;
+	text-align:center;
+	padding-bottom:30px;
+}
+div.row.pricetable-container {
+	padding:0 15px;
+}
+	div.price-table h3 {
+		font-size:25px;
+		line-height:25px;
+		padding:30px 0;
+		border-bottom:rgba(0,0,0,0.1) 2px solid;
+		text-transform:uppercase;
+	}
+	div.price-table p {
+		color:#666;
+		font-size:36px;
+		padding:30px 0;
+		font-weight:400;
+
+		width:150px;
+		height:150px;
+		padding-top:60px;
+
+		display:inline-block;
+		background-color:rgba(0,0,0,0.05);
+
+		-webkit-border-radius: 50%;
+		   -moz-border-radius: 50%;
+				border-radius: 50%;
+	}
+	div.price-table p span {
+		display:block;
+		font-size:10px;
+		font-weight:300;
+		text-transform:uppercase;
+	}
+	div.price-table ul {
+		margin:0;
+		padding:0;
+	}
+	div.price-table ul li {
+		list-style:none;
+		font-size:12px;
+		border-bottom:rgba(0,0,0,0.1) 1px solid;
+		padding:8px;
+		text-transform:uppercase;
+	}
+	div.price-table.popular,
+	div.price-table.popular ul li,
+	div.price-table.popular p,
+	div.price-table.popular p span,
+	div.price-table.popular h3 {
+		color:#fff;
+	}
+	div.price-table.popular {
+		background:#676767;
+	}
+	div.price-table .btn {
+		color:#fff;
+		margin-top:30px;
+	}
+
+     /*style="padding-top:4px; margin-left: 1px !important" class="checkbox">*/
+
+     #PymtIncludesMI{
+         padding-top:4px; 
+         margin-left: 1px !important;
+     }

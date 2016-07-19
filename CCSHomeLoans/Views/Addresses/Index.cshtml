@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+}
+
+
+@(Html.Kendo().Grid<CcsData.Models.Address>
+    ()
+    .Name("AddressGrid")
+    .Scrollable()
+    .HtmlAttributes(new { Style = "height:600px" })
+    .Resizable(resize => resize.Columns(true))
+    .Reorderable(reorder => reorder.Columns(true))
+    .ColumnMenu()
+    .Groupable()
+    .Sortable()
+    .Pageable()
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .PageSize(10)
+    .Model(model => model.Id(a => a.Address_Id))
+        .Read(read => read.Action("GetAddresses", "Addresses"))
+        .Update(update => update.Action("EditingInline_Update", "Addresses"))
+    )
+
+    .Editable(editable => editable.Mode(GridEditMode.InLine))
+
+    .Columns(columns =>
+    {
+        columns.Command(command => { command.Edit().UpdateText("Save").CancelText("back"); }).Locked(true).Lockable(false).Width(120);
+
+        columns.Bound(model => model.AddressDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.StreetAddress).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.UnitNumber).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.City).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.State).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.ZipCode).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.County).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Zip4).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.ZipPlusZip4).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CareOfName).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CarrierRoute).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Country).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.IsMailingAddress).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.IsMailBox).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.YearsAtThisAddress).Width(120).Lockable(true);
+
+
+
+    })
+
+)

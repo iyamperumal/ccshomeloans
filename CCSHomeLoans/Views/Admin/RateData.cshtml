@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "RateData";
+    Layout = "~/Views/Shared/_Layoutkendo.cshtml";
+}
+
+<h2>Rate Data</h2>
+
+<div style="width:80%">
+    <div class="demo-section">
+        @(Html.Kendo().Upload()
+            .Name("files")
+            .Multiple(false)
+            .Async(a => a
+                .Save("Save", "admin")
+                .Remove("Remove", "admin")
+                .AutoUpload(false)
+
+            )
+        )
+    </div>
+</div>

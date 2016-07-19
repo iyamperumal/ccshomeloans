@@ -1,0 +1,59 @@
+@using CcsWeb.Models
+@model AppEmailModel
+
+<div style="align-content: flex-end; width:80% ">
+    <img src="http://ccshl1.com.jasmine.arvixe.com/Content/Eimages/logo_1sm.png" alt="" />
+</div>
+<div style="color:#9d9d9d ;text-align:right ;width:80%; margin-top: -40px">
+    <span>Toll Free 800-565-2390</span>
+    <br />
+    <span> Local 904-351-8088</span>
+</div>
+<div style="color:#9d9d9d; text-align:right ;width:80%; margin-top: 0px">
+    <img src="http://ccshl1.com.jasmine.arvixe.com/Content/Eimages/bbbLog0.jpg" alt="" />
+    <br />
+    <span><strong>A+ Rated</strong></span>
+</div>
+<div style="background-color:#990000;width:80%; color:#e6e2e2; margin:10px 0px 0px 0px; border-top:solid; border-top-color: black; border-top-width: 5px; text-align:center">
+    <h2 style="padding:25px 25px">@Model.FirstName @Model.LastName, Submitted an Application for Mortgage Financing</h2>
+</div>
+<div style="padding:60px 60px; font-weight:600">
+
+    <span><strong>@Model.RealtorFName ,</strong></span>
+    <br />
+    <br />
+    <span>We just wanted to let you know that we received <strong>@Model.FirstName </strong><strong>@Model.LastName 's</strong> , application for mortgage financing today at @DateTime.Now.</span>
+    <br />
+    <br />
+    <span>We are now processing the request to determine the borrowers eligibility and maximum loan amount and sale price to issue a pre-approval. </span>
+    <br />
+    <br />
+    <span>
+        As soon as we complete the determination of eligibility/pre-approval we will notify you by email. If you have any questions or additional request please call us at <strong>904-351-8088</strong>
+    </span>
+    <br />
+    <br />
+
+
+    Thank you,<br /><br />
+
+    <a href="http://ccshomeloans.com" target="_blank" title="Mortgae" name="CCS">ccshomeloans.com</a><br />
+
+    <br />
+    <br />
+
+    <div style="color:#9d9d9d "><b>nmls# 1070755</b></div>
+
+</div>
+
+<div style="background-color:#990000;width:80%; color:#e6e2e2; margin:10px 0px 0px 0px; padding: 10px 10px">
+    <table style="border-collapse:collapse;width:100%; color:aliceblue; padding:20px 20px">
+        <tbody>
+            <tr>
+                <td style="text-align: center;">&nbsp;Since1998</td>
+                <td style="text-align: center;">Over 5000 Loans Funded&nbsp;</td>
+                <td style="text-align: center;">&nbsp;Intelligent Loan Engine</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

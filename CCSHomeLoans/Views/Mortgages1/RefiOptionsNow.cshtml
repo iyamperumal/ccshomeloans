@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "RifiOption";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+
+                                                     
+<div class="ng-cloak" ng-controller="optionsController">
+
+    <article>
+        <div class="alert alert-link">
+            <p>
+                {{data[0].PreparedFor}},
+            </p>
+            <p>In short, you will save approx. <strong>${{data[0].Hl_MonthlySavings | number:2}} </strong>  per month. The easiest way to see the financial savings is to look at the number of payments eliminated by refinancing and continuing to make the same payment as you have now.</p>
+
+            <p><strong>This loan has a financial savings of ${{data[0].Hl_TotalSavingsFromOldMortgageToNewMortgage | number:2}}. </strong> By continuing to make the same payment you have now, you will eliminate <strong>{{data[0].Hl_MonthlyPaymentsEliminated}} payments off of the {{data[0].Hl_MonthsPaidRemaining}} payments</strong> remaining on your current mortgage. Thus leaving only 81 payments to remaining.</p>
+
+            <p>If you need any assistance in explaining the reports please allow us the opportunity to help you by calling our Customer Service Center at 1-800-565-2390 Monday - Friday 9:00 AM - 7:00 PM</p>
+        </div>
+    </article>
+
+    <div class="col-md-4 price-table {{i.Hilited}}" ng-repeat="i in data">
+
+        @*<h3><strong>$ {{i.LoanAmount | number:3 }}</strong></h3>*@
+        <h3><strong>{{i.TermInYears}} Years at {{i.InterestRate | number:3}} %</strong></h3>
+        <h4>{{i.OptionName}}</h4>
+        <p>
+            <strong>
+                ${{i.NewMonthlyPaymentPrincipalInterest | number:2}}
+            </strong>
+            <span>PER MONTH</span>
+            <span>{{i.APR | number:3}} % APR</span>
+        </p>
+        <ul>
+            @*<li>{{i.InterestRate}} %   InterestRateSavings ShowSecondMtg</li>*@
+            <li>Program: {{i.ProgramOption}}</li>
+            <li ng-show="i.ShowMonthlySaving">Payment Savings: $ {{i.MonthlySavings | number:2}}</li>
+            <li ng-show="i.ShowCashout">Cashout Amount: $ <strong>{{i.Cashout | number:2}}</strong></li>
+            <li ng-show="i.ShowNetSaving">Interest Saved: $ {{i.NetSavingsFromOldLoanToNewLoan | number:2}}</li>
+            <li ng-show="i.ShowInterestSaving">Reduced Rate by: {{i.InterestRateSavings | number:3}} %</li>
+            <li ng-show="i.ShowBlendedRate">Reduced Blended Rate by: {{i.BlendedRateSavings | number:3}} %</li>
+            <li>**Loan Amount: $ {{i.LoanAmount | number:2}}</li>
+            <li>Months To Break Even: {{i.CostSavingsBreakEvenAnalysis | number:2}}</li>
+            
+          @*  <li>Maximum Interest Saving: {{i.AcceleratedPayoffTotalAmountOfAllPayments | number:2}}</li>*@
+
+
+        </ul>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" ng-href="#collapse{{i.OptIntex}}">
+                            Debts Paid Off
+                        </a>
+                    </h4>
+                </div>
+                <div id="{{'collapse' + i.OptIntex}}" class="panel-collapse collapse out">
+                    <div class="panel-body">
+                        <ul>
+                            <li>1st Mortgage Balance:  ${{i.LoanBalance | number:2}}</li>
+                            <li ng-show="i.ShowDebtConsal">Debt Paid:  ${{i.TotalBalanceOfDebtToConsolidate | number:2}}</li>
+                            <li ng-show="i.ShowSecondMtg">2nd Mortgage Balance: $ <strong>{{i.SecondMtgBalance | number:2}}</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" ng-href="#collapseb{{i.OptIntex}}">
+                            Maximized Savings Plan 
+                        </a>
+                    </h4>
+                </div>
+                <div id="{{'collapseb' + i.OptIntex}}" class="panel-collapse collapse out">
+                    <div class="panel-body">
+                        <ul>
+                            <li>New Payment + Monthly Savings:  ${{i.NewPaymentPlusMonthlySavings | number:2}}</li>
+                            <li>Payments remaining on old loan: {{i.MonthsPaidRemaining}}</li>
+                            <li>Payments remaining on new Loan: {{i.NumberofPaymentstoMaturity}}</li>
+                            <li>**Payments Eliminated: {{i.MonthlyPaymentsEliminated}}</li>
+                            <li>**Maximum Interest Saves: $ {{i.TotalSavingsFromOldMortgageToNewMortgage | number:2}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" ng-href="#collapsec{{i.OptIntex}}">
+                            <strong>Debug values</strong> 
+                        </a>
+                    </h4>
+                </div>
+                <div id="{{'collapsec' + i.OptIntex}}" class="panel-collapse collapse out">
+                    <div class="panel-body">
+                        <ul>
+                            <li>Front/Back DTI:  {{i.FrontDTI | number:2}} / {{i.BackDTI | number:2}}</li>
+                            <li>LTV/CLTV: {{i.LTV | number:2}} / {{i.CLTV | number:2}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-success btn-lg" ng-click="optionSelected(i, $wij)">Select</a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/ccsApp.js")
+    @Scripts.Render("~/Scripts/ccsAng.js")
+
+}

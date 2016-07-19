@@ -1,0 +1,331 @@
+﻿@model CcsData.Models.CreditPull.RequestCred
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RequestCred</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RECEIVING_PARTY_Identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RECEIVING_PARTY_Identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUBMITTING_PARTY_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUBMITTING_PARTY_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUBMITTING_PARTY_Identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUBMITTING_PARTY_Identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_Format)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREFERRED_RESPONSE_Format)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_FormatOtherDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREFERRED_RESPONSE_FormatOtherDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_UseEmbeddedFileIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREFERRED_RESPONSE_UseEmbeddedFileIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestDatetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestDatetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InternalAccountIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InternalAccountIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginAccountIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginAccountIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginAccountPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginAccountPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditRequestID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditRequestID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REQUEST_DATA_BorrowerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REQUEST_DATA_BorrowerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditReportIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditReportIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditReportRequestActionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditReportRequestActionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditReportType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditReportType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditRequestDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditRequestDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditRequestType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditRequestType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MISMOVersionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MISMOVersionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LenderCaseIdentifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LenderCaseIdentifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestingPartyRequestedByName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestingPartyRequestedByName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquifaxIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquifaxIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExperianIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperianIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransUnionIndicator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransUnionIndicator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BorrowerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BorrowerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameSuffix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameSuffix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeAtApplicationYears)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeAtApplicationYears)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrintPositionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrintPositionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatusType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatusType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BorrowerResidencyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BorrowerResidencyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exeption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exeption)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RequestCred_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

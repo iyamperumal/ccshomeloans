@@ -1,0 +1,23 @@
+﻿<div ng-controller="optionsController">
+
+    <div class="col-md-4 price-table popular" ng-repeat="i in data">
+
+        <h3>{{i.OptionName}}</h3>
+        <p>
+            <strong>
+                $1172.51
+            </strong>
+            <span>PER MONTH</span>
+        </p>
+        <ul>
+            <li>{{i.InterestRate}} apr</li>
+            <li>Payment Savings: $ {{i.MonthlySavings}}</li>
+            <li>Term: {{i.TermInYears}}</li>
+            <li>Payment: $ {{i.NewMonthlyPaymentPrincipalInterest}}</li>
+            <li>Amount: $ {{i.LoanAmount}}</li>
+            <li>Interest Saved: $ {{i.TotalSavingsFromOldMortgageToNewMortgage}}</li>
+            <li>Months To Break Even: {{i.CostSavingsBreakEvenAnalysis}}</li>
+        </ul>
+        <a href="#" class="btn btn-success btn-sm">SIGN UP</a>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+﻿@model decimal?
+<div class="col-sm-6">
+    @*@Html.TextBox("", string.Format("{0:c}",ViewData.TemplateInfo.FormattedModelValue), new { @class = "form-control input-lg"})*@
+    <span class='currency-symbol'>$</span>
+    @Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, new { @class = "form-control input-lg currency" })
+    @*Html.TextBoxFor("", ViewData.TemplateInfo.FormattedModelValue, new { @class = "form-control input-lg", Value = String.Format("{0:C}" })*@
+</div>

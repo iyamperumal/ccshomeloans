@@ -1,0 +1,449 @@
+﻿@model CcsData.Models.Application
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Realtor.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Realtor.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanTypeRequested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanTypeRequested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashOutRequested)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashOutRequested)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerShipType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerShipType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimateTotalDebtToPayOff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimateTotalDebtToPayOff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalOfMonthlyPaymentsOnDebtToPayOff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalOfMonthlyPaymentsOnDebtToPayOff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchasePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DownPaymentAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DownPaymentAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedHomeownersAssociationFeesAnnual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedHomeownersAssociationFeesAnnual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerShipLongevity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerShipLongevity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditScoreEstimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditScoreEstimate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DaysLate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DaysLate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiledBankruptcyType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiledBankruptcyType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BankruptcyDischargeDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BankruptcyDischargeDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chapter13FilingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chapter13FilingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ForeclosuresShortSaleDeedinLieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ForeclosuresShortSaleDeedinLieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ForeclosureShortSaleDeedinLieuDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ForeclosureShortSaleDeedinLieuDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrossAnnualIncome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrossAnnualIncome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalMontlyPayments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalMontlyPayments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RuralProperty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RuralProperty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Veteran)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veteran)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstimatedHomeValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstimatedHomeValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMortgageBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMortgageBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentInterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentInterestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestRateType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InterestRateType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MortgageTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MortgageTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Have2ndMortgage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Have2ndMortgage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayOff2ndMortgage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayOff2ndMortgage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgageBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgageBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgageInterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgageInterestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgageRateType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgageRateType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgageTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgageTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgagePayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgagePayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondMortgageOriginationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondMortgageOriginationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMortgagePayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMortgagePayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PymtIncludesMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PymtIncludesMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PymtIncludesPropTaxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PymtIncludesPropTaxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PymtIncludesMone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PymtIncludesMone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PymtIncludesHomeownersInsurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PymtIncludesHomeownersInsurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoaDuesFees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoaDuesFees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualPropertyTaxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnnualPropertyTaxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualHomeownersInsur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnnualHomeownersInsur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualHomeownersAssocDues)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnnualHomeownersAssocDues)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

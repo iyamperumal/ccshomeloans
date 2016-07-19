@@ -1,0 +1,465 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+    ViewBag.HeaderText = "LOAN PROGRAMS BACKUP";
+
+}
+
+
+
+
+@(Html.Kendo().Grid<CcsData.Models.VariableBackup>() //Bind the grid to ViewBag.Products
+        .Name("Vargrid")
+        .Scrollable()
+        .HtmlAttributes(new { Style = "height:600px" })
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .ColumnMenu()
+        .Groupable()
+        .Sortable()
+        .Pageable()
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(10)
+            .Model(model => model.Id(p => p.VariableBackup_Id))
+            .Read(read => read.Action("GetVariableBackups", "Admin"))
+            .Update(update => update.Action("SetVariableBackups", "Admin"))
+         )
+
+         .Editable(editable => editable.Mode(GridEditMode.InLine))
+
+        .Columns(columns =>
+        {
+            columns.Command(command => { command.Edit().UpdateText("Save").CancelText("back"); }).Locked(true).Lockable(false).Width(120);
+
+            columns.Bound(model => model.VariableBackup_Id).Width(120).Hidden(true).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Refi).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.RefiCashout).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Purchase).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.RateTerm).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Active).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LoanType).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MortgageProgramOption).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.RateType).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.SFR).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Condo).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Manufactured).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MobileHome).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MultiUnits).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.TownHome).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Lender).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LenderLogo).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.ScheduleName).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Investment).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.SecondHome).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.PrimaryResidence).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.AdjustableTerms).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxNumberOfUnits).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.newTermInYears).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NewInterestRate).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.OriginationPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.QuoteLenderPaid).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.QuoteBorrowerPaid).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LenderCreditPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.DiscountPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.TitleInusrancePercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.IntangibleTaxPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.StateTaxPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.DeedStampPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LenderTitleInsuranceFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.PestInspectionFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.SurveyFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.TaxServiceFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FloodCertificationFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.PropertyType).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LTV_Range).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxLTV).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MinLTV).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.CLTV).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxLoanAmount).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxCashOut).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.CreditScoreRange).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NumOf30LateAllowedIn12Mo).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NumOf30LateAllowedIn24Mo).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxfrontDTI).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MaxBacktDTI).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Bankruptcy).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.Foreclosure).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.UpfrontMI).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MiFactor).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.LenderPaidComp).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MiDurationYears).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FHA_Upfront_MIP_Refi_percent_beforeJune1_2009).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FHA_Upfront_MIP_RefiOrPurchase_percent_AfterMay31_2009).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FHA_Monthly_MIP_RefiOrPurchase_percent_AfterMay31_2009).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FHA_Monthly_MIP_Refi_percent_BeforeJune1_2009).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.ConventionalPmiFactor).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactorZeroDown).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactor5to10Down).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactor10PlusDown).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactorRefiNoCashout).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactorWithCashout).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.VaFundingFeeFactorMobileHomeRefiNoCashout).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.HazardInsurancePercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.FloodInsurancePercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.PropertyTaxPercent).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.DailyInterestCalculation).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NumofMonthstoEscrowTaxes).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NumofMonthstoEscrowHazardInsurance).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.NumofMonthstoEscrowFloodInsurance).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.ProcessingFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.UnderwritingFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.AppraisalFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.CreditReportFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.ClosingEscrowFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.EndorsementsReconveyanceFee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.MortgageRecordingfee).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.OptionNumber).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.State).Width(120).Lockable(true);
+
+
+
+
+            columns.Bound(model => model.County).Width(120).Lockable(true);
+
+
+
+
+
+        })
+)
+
+
+

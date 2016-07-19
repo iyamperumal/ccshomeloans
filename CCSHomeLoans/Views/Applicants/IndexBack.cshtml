@@ -1,0 +1,218 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+}
+
+@(Html.Kendo().Grid<CcsData.Models.Applicant>()
+    .Name("ApplicantGrid")
+        .Scrollable()
+        .HtmlAttributes(new { Style = "height:600px" })
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .ColumnMenu()
+        .Groupable()
+        .Sortable()
+        .Pageable()
+        .ClientDetailTemplateId("template")
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .PageSize(10)
+    .Model(model => model.Id(a => a.Applicant_Id))
+        .Read(read => read.Action("GetApplicants", "Applicants"))
+                .Update(update => update.Action("EditingInline_Update", "Applicants"))
+
+
+    )
+
+    .Editable(editable => editable.Mode(GridEditMode.InLine))
+
+    .Columns(columns =>
+    {
+
+        columns.Command(command => { command.Edit().UpdateText("Save").CancelText("back"); }).Locked(true).Lockable(false).Width(120);
+
+
+
+
+        columns.Bound(model => model.LoanTypeRequested).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.FullName).Width(120).Locked(true).Lockable(false);
+
+        //--------------
+        columns.Bound(model => model.LastName).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.FirstName).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.MiddleName).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Suffix).Width(120).Lockable(true);
+        //----------------
+
+        columns.Bound(model => model.CreditScoreEstimate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Motive).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CashOutAmountRequested).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CashOutType).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.ComputedCashOutAmountAvailable).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.TotalBalanceOfDebtToConsolidate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.TotalMonthlyAmountOfDebtPaymentsToConsolidate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.EmailAddress).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CareOfName).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.HomePhone).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.WorkPhone).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CellPhone).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Fax).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.DoNotCall).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.MaritalStatus).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.DateOfBirth).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.SocialSecurityNumber).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.SocialSecurity4).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.YearsInSchool).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.NumberOfDependents).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Ages).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.ClientApplicationDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CallBackDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CallBackTime).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.TimesMailed).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.BatchNumber).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CreditResolicitDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.LTVResolicitDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.DTIResolicitDate).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.OptionNumber).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Disposition).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.LenderRefuseReason).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.ClientRefuseReason).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CreditRatingReason).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.SiteRating).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.CustomerServiceRating).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Veteran).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.Have2ndMortgage).Width(120).Lockable(true);
+
+
+        columns.Bound(model => model.PayOff2ndMortgage).Width(120).Lockable(true);
+
+        columns.Bound(model => model.Applicant_Id).Width(120).Lockable(true);
+        //columns.Bound(model => model.LeadsData_ID).Width(120).Lockable(true);
+
+
+    })
+
+)
+
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<CcsData.Models.Property>()
+        .Name("ApplicantGrid_#=Applicant_Id")
+        .Scrollable()
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .ColumnMenu()
+        .Sortable()
+        .Pageable()
+             .DataSource(dataSource => dataSource
+             .Ajax()
+             .PageSize(10)
+             .Model(model => model.Id(a => a.Property_Id))
+                             .Read(read => read.Action("GetProperty", "Applicants", new { applicantID = "#=Applicant_Id" }))
+             .Update(update => update.Action("EditingInline_propertyUpdate", "Applicants"))
+
+
+    )
+                           .Editable(editable => editable.Mode(GridEditMode.InLine))
+
+                           .Columns(columns =>
+                           {
+                               columns.Bound(model => model.EstimatedMarketValue).Width(120);
+
+                               columns.Bound(model => model.Property_Id).Width(120);
+
+
+                           })
+    )
+
+
+</script>
+<script>
+    function dataBound() {
+        this.expandRow(this.tbody.find("tr.k-master-row").first());
+    }
+</script>
+
+
+

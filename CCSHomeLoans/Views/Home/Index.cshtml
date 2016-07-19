@@ -1,0 +1,206 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="wrapper">
+
+    <!-- SLIDER -->
+    <section id="slider" class="nomargin nopadding">
+
+        <!-- loader image -->
+        <img class="imgLoader" src="/Content/images/ajax-loader.gif" alt="loading..." width="32" height="32" />
+
+        <!-- slider controlls -->
+        <a href="#" class="sliderPrev"></a><a href="#" class="sliderNext"></a>
+
+        <div class="fullSlider">
+
+            <div>
+                <!-- slider item -->
+                <img src="/Content/images/slider/business-woman.jpg" alt="" />
+
+                <!-- image caption -->
+                <span class="raster hover"></span>
+                <div class="image-caption">
+                    <div class="container">
+                        <div class="inner text-left">
+                            <p>A Consumer Driven Instant Multiple Lender Loan Quote Engine</p>
+                            <h1>Consumer Credit Services</h1>
+                        </div>
+                    </div>
+                </div><!-- /image caption    -->
+            </div><!-- /slider item -->
+
+            <div>
+                <!-- slider item -->
+                <img src="/Content/images/slider/business-happy.jpg" alt="" />
+
+                <!-- image caption -->
+                <span class="raster hover"></span>
+                <div class="image-caption">
+                    <div class="container">
+                        <div class="inner text-left">
+                            <p>Providing Wholesale Mortgage Rates Direct to Consumers.</p>
+                            <h2>Multiple Lenders Competing</h2>
+                        </div>
+                    </div>
+                </div><!-- /image caption -->
+            </div><!-- /slider item -->
+
+            <div>
+                <!-- slider item -->
+                <img src="/Content/images/slider/video-bg.jpg" alt="" />
+
+                <!-- image caption -->
+                <span class="raster hover"></span>
+                <div class="image-caption">
+                    <div class="container">
+                        <div class="inner text-left">
+                            <p>Within minutes you can: Get Pre-Approved, Compare Offers,</p>
+                            <h2>Review Savings, and Start your loan.</h2>
+                        </div>
+                    </div>
+                </div><!-- /image caption -->
+            </div><!-- /slider item -->
+
+        </div>
+
+    </section>
+    <!-- /SLIDER -->
+    <!-- APPLY BAR -->
+    <section class="apply-bar">
+        <div class="container">
+
+            <div class="desc">
+                <img style="padding-right : 10px" src="~/Content/images/bbbWt.png" />
+            </div>
+
+            <!-- SMALL DESC -->
+            <div class="desc">
+                <h2>Better Business Bureau says A+</h2>
+                <p class="grey">&bull; Since 1998 &bull; Over 5000 Clients &bull;</p>
+            </div>
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @*Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary" })*@
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary" })
+
+                <br /> <span class="learn_more">or @Html.ActionLink("Learn More", "LearnMore", "Home")</span>
+            </div>
+
+        </div>
+    </section>
+    <!-- /APPLY BAR -->
+    <!-- section -->
+    <section>
+
+        <div class="container">
+            <header>
+                <h1>IN JUST 10 MINUTES</h1>
+            </header>
+
+            <article>
+                <p style="text-align:center">Get <b>Pre Approved, Select Best Offer & Start Closing your Loan</b> all with CCS Home Loans.</p>
+
+                <div class="circle-11min">
+
+                    <div class="row">
+
+                        <div class="col-md-4 animate_from_bottom">
+                            <span class="line-mask left"></span>
+                            <div class="rounded">
+                                1 <small>3 min.</small>
+                            </div>
+                            <div class="box">
+                                <h3 style="color: #AC1E1E">Get Pre approved</h3>
+                                <p>
+                                    &bull; Save up to $600.00 a Month or more &bull;<br />
+                                    &bull; Pay off Bills Lower Monthly Payments &bull;<br />
+                                    &bull; 100% Financing Purchase Loans &bull;<br />
+                                    &bull; Cut years off your Mortgage &bull;<br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 animate_from_bottom">
+                            <span class="bull">&bull;</span>
+                            <div class="rounded">
+                                2 <small>3 min.</small>
+                            </div>
+                            <div class="box">
+                                <h3 style="color: #AC1E1E">Compare Offers</h3>
+                                <p>
+                                    &bull; Lowest Monthly Payments &bull;<br />
+                                    &bull; No Fees Mortgage Loans &bull;<br />
+                                    &bull; Lowest Interest Rate &bull;<br />
+                                    &bull; Maximized Savings &bull;<br />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 animate_from_bottom">
+                            <span class="bull">&bull;</span>
+                            <span class="line-mask right"></span>
+                            <div class="rounded">
+                                3 <small>5 min.</small>
+                            </div>
+                            <div class="box">
+                                <h3 style="color: #AC1E1E">Start Your Loan</h3>
+                                <p>
+                                    &bull; Real Time Email Status Update &bull;<br />
+                                    &bull; Fast Underwriting to Closings &bull;<br />
+                                    &bull; Automated Processing &bull;<br />
+                                    &bull; Since 1998, A+ Rated &bull;<br />
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+        </div>
+
+    </section>
+    <!-- /section -->
+    <!-- section -->
+    <section class="alternate">
+
+        <div class="container">
+            <header>
+                <h1>MULTIPLE LENDERS COMPETING</h1>
+                <p>Providing Wholesale Mortgage Rates Direct to Consumers.</p>
+            </header>
+
+            <article>
+                <p>At CCS Home Loans we originate, process and close your loan request with the lender of your choice. Within minutes you can compare REAL LOAN OFFERS and PRE APPROVALS from multiple lenders, giving you the confidence that you found the right loan all within minutes. </p>
+
+                <div class="text-center animate_from_top">
+                    <div class="circle-content">
+                        <div class="circle one">5,093</div>
+                        <h3>Total Clients Served</h3>
+                    </div>
+
+                    <div class="circle-content">
+                        <div class="circle two">$ 478.33</div>
+                        <h3>Average Monthly Savings</h3>
+                    </div>
+
+                    <div class="circle-content">
+                        <div class="circle three">$ 63,592.86</div>
+                        <h3>Average Loan Savings</h3>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+    <!-- /section -->
+
+
+
+
+</div>
+

@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "About5";
+}
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background: url('/content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                <br /> <span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>LICENSING</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+                <li>Licensing</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- Licensing -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Mortgage Licensing, Regulations &amp; Consumer Advocates</h2>
+            </header>
+
+            <article>
+                <p>
+                    <a href="https://real.flofr.com/consumerservices/searchlicensingrecords/SearchDetail.aspx?licNum=MBR1434&amp;licDesc=MBR" target="_blank">
+                        <i class="fa fa-external-link"></i> Verify Mortgage License through State of Florida Office of Financial Regulations
+                    </a><br>
+                    Consumer Credit Services is licensed through the State of Florida Office of Financial Regulations MBR# 1434. We are current with all licenses and have completed all required annual filings and continuing education.
+                </p>
+
+                <p>
+                    <a href="http://nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1070755" target="_blank">
+                        <i class="fa fa-external-link"></i> Verify National Mortgage Licensing System
+                    </a><br>
+                    Consumer Credit Services has an active National Mortgage Licensing System #1070755. We are current with all licenses and have completed all required quarterly and annual filings as required.
+                </p>
+
+                <p>
+                    <a href="http://www.bbb.org/north-east-florida/business-reviews/mortgage-lender/consumer-credit-services-llc-in-jacksonville-fl-11753" target="_blank">
+                        <i class="fa fa-external-link"></i> Verify our Better Business Bureau Standings
+                    </a><br>
+                    After 15 years of Business and over 5000 closed and funded loans, our clients rate us A+ as verified by the Better Buiness Bureau.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+
+</div>
+

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "About3";
+}
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background: url('/content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                 <br /><span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>CCS vs QUICKEN LOANS</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+                <li>CCS vs Quicken Loans</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- CCS vs Quicken Loans -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Why Use CCS Mortgage Loans vs Quicken Loans?</h2>
+            </header>
+
+            <h3 class="subtitle">CCS versus Quicken Loans</h3>
+            <article>
+                <p>
+                    Unlike LendingTree, who simply sells your information to multiple companyies,Quicken Loans, a single mortgage lender, can only offer you their interest rates and closing cost. By working with Quicken Loans, you loose your ability to shop for the best mortgage interest rates and closing costs.
+                </p>
+            </article>
+
+            <h3 class="subtitle">CCS Solution</h3>
+            <article>
+                <p>
+                    Since Quicken Loans does not provide you the ability to shop multiple mortgage lenders and LendingTree is not the actual lender and only sells your partially completed loan application to multiple companies that will each need to pull your credit and take a full loan aplication, we are happy to provide the CCS Solution for you.
+                </p>
+
+                <p>
+                    One Company, One Application, Multiple Lenders competing with Wholesale Interest Rates. We will provide you with a Tailored Lender Comparison Summary that shows you the best loan and lender!
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+
+</div>
+

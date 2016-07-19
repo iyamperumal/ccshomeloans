@@ -1,0 +1,169 @@
+﻿@model CcsData.Models.CreditPull.CreditMortgage
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CreditMortgage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseCred.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResponseCred.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Whose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Whose)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sourse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sourse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late30)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late30)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late30Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late30Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late60)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late60)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late60Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late60Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late90)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late90)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late90Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late90Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOpened)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOpened)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HiCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HiCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Term)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthsRemaining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthsRemaining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

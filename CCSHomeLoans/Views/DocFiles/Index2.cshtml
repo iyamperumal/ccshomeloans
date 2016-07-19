@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+}
+
+<h2>DocFile </h2>
+
+
+
+
+@(Html.Kendo().Grid<CcsData.Models.FileUpload.DocFile>() //Bind the grid to ViewBag.Products
+        .Name("grid")
+        .Scrollable()
+        .HtmlAttributes(new { Style = "height:600px" })
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .ColumnMenu()
+        .Groupable()
+        .Sortable()
+        .Pageable()
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(10)
+            .Model(model => model.Id(p => p.DocFile_Id))
+            .Read(read => read.Action("GetDocFiles", "DocFiles"))
+            .Update(update => update.Action("SetDocFiles", "DocFiles"))
+         )
+
+         .Editable(editable => editable.Mode(GridEditMode.InLine))
+
+        .Columns(columns =>
+        {
+
+            columns.Command(command => { command.Edit().UpdateText("Save").CancelText("back"); }).Locked(true).Lockable(false).Width(120);
+
+
+            columns.Bound(model => model.DocFile_Id).Width(120).Hidden(true).Lockable(true);
+
+
+            columns.Bound(model => model.DocFileType).Width(120).Lockable(true);
+
+
+            columns.Bound(model => model.FileName).Width(120).Lockable(true);
+
+
+            columns.Bound(model => model.FilePath).Hidden(true).Width(120).Lockable(true);
+
+
+            columns.Bound(model => model.Note).Width(120).Lockable(true);
+
+
+        })
+)
+
+  
+

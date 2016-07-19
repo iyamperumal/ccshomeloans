@@ -1,0 +1,472 @@
+﻿@model IEnumerable<CcsData.Models.Variable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageProgramOption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RateType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SFR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Condo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufactured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MultiUnits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TownHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LenderLogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdjustableTerms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxNumberOfUnits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.newTermInYears)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewInterestRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginationPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LenderCreditPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscountPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TitleInusrancePercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntangibleTaxPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateTaxPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeedStampPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LenderTitleInsuranceFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PestInspectionFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SurveyFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxServiceFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloodCertificationFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTV_Range)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxLTV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLTV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxLoanAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxCashOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditScoreRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOf30LateAllowedIn12Mo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOf30LateAllowedIn24Mo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxfrontDTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxBacktDTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bankruptcy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foreclosure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpfrontMI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiFactor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LenderPaidComp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiDurationYears)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FHA_Upfront_MIP_Refi_percent_beforeJune1_2009)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FHA_Upfront_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FHA_Monthly_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FHA_Monthly_MIP_Refi_percent_BeforeJune1_2009)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConventionalPmiFactor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorZeroDown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactor5to10Down)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactor10PlusDown)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorRefiNoCashout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorWithCashout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaFundingFeeFactorMobileHomeRefiNoCashout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HazardInsurancePercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FloodInsurancePercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyTaxPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DailyInterestCalculation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowTaxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowHazardInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumofMonthstoEscrowFloodInsurance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProcessingFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnderwritingFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppraisalFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditReportFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosingEscrowFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndorsementsReconveyanceFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageRecordingfee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OptionNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.County)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageProgramOption)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RateType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SFR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Condo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manufactured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MultiUnits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TownHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LenderLogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdjustableTerms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxNumberOfUnits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.newTermInYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewInterestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OriginationPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LenderCreditPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiscountPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TitleInusrancePercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IntangibleTaxPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateTaxPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeedStampPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LenderTitleInsuranceFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PestInspectionFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurveyFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaxServiceFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloodCertificationFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTV_Range)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxLTV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLTV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxLoanAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxCashOut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditScoreRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOf30LateAllowedIn12Mo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOf30LateAllowedIn24Mo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxfrontDTI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxBacktDTI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bankruptcy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Foreclosure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpfrontMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiFactor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LenderPaidComp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiDurationYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FHA_Upfront_MIP_Refi_percent_beforeJune1_2009)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FHA_Upfront_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FHA_Monthly_MIP_RefiOrPurchase_percent_AfterMay31_2009)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FHA_Monthly_MIP_Refi_percent_BeforeJune1_2009)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConventionalPmiFactor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactorZeroDown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactor5to10Down)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactor10PlusDown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactorRefiNoCashout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactorWithCashout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaFundingFeeFactorMobileHomeRefiNoCashout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HazardInsurancePercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FloodInsurancePercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyTaxPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DailyInterestCalculation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumofMonthstoEscrowTaxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumofMonthstoEscrowHazardInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumofMonthstoEscrowFloodInsurance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProcessingFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnderwritingFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppraisalFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditReportFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClosingEscrowFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndorsementsReconveyanceFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageRecordingfee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OptionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.County)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Variable_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Variable_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Variable_Id })
+        </td>
+    </tr>
+}
+
+</table>

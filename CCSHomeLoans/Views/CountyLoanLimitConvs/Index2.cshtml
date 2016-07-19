@@ -1,0 +1,97 @@
+﻿@model IEnumerable<CcsData.Models.CountyLoanLimitConv>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@(Html.Kendo().Grid<CcsData.Models.CountyLoanLimitConv>()
+        .Name("CountyLoanLimitConvGrid")
+        .Scrollable()
+        .HtmlAttributes(new { Style = "height:600px" })
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .Sortable()
+        .Pageable()
+        .DataSource(datasource => datasource
+                .Ajax()
+                .PageSize(10)
+                .Model(model => model.Id(c => c.CountyLoanLimitConv_Id))
+                .Read(read => read.Action("GetCountyLoanLimitConvs", "CountyLoanLimitConvsController"))
+                .Update(update => update.Action("EditingInline_Update", "CountyLoanLimitConvsController")))
+        .Editable(editable => editable.Mode(GridEditMode.InCell))
+        .Columns(columns =>
+        {
+            columns.Command(command => { command.Edit().UpdateText("Save").CancelText("Back"); }).Locked(true).Lockable(true).Width(150);
+            columns.Bound(model => model.State);
+            columns.Bound(model => model.County);
+            columns.Bound(model => model.Fips);
+            //columns.Bound(model => model.LoanLimit1Unit);
+            //columns.Bound(model => model.LoanLimit2Unit);
+            //columns.Bound(model => model.LoanLimit3Unit);
+            //columns.Bound(model => model.LoanLimit4Unit);
+        })
+)
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.County)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fips)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanLimit1Unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanLimit2Unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanLimit3Unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanLimit4Unit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.County)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fips)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanLimit1Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanLimit2Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanLimit3Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanLimit4Unit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CountyLoanLimitConv_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CountyLoanLimitConv_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CountyLoanLimitConv_Id })
+        </td>
+    </tr>
+}
+
+</table>

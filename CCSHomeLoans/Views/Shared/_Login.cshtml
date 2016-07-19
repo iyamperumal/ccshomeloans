@@ -1,0 +1,51 @@
+﻿@using CcsWeb.Models
+@model LoginViewModel
+
+<!-- login button -->
+<div id="loginBtn" class="topBtn pointer">
+    <i class="fa fa-angle-right"></i> Log in
+
+    <div id="loginDD">
+        <!-- login dropdown -->
+        <h4><i class="fa fa-users"></i> Members</h4>
+        <hr />
+        @*<form method="post" action="#">*@
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <span class="form-group">
+                <i class="fa fa-user"></i>
+                @*<input type="text" name="text_box" value="" placeholder="User Name" />*@
+                @Html.TextBoxFor(m => m.UserName, new { @placeholder = "User Name" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </span>
+
+            <span class="form-group">
+                <i class="fa fa-key"></i>
+                @*<input type="password" name="password" value="" placeholder="Password" />*@
+                @Html.PasswordFor(m => m.Password, new { @placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </span>
+
+            <span class="form-group">
+                @*<button class="btn btn-default">LOG IN</button>*@
+                <label class="label_check" for="rememberMe">
+                    <input data-val="true" data-val-required="The Remember me? field is required." type="checkbox" name="rememberMe" id="rememberMe" value="true" checked="checked" /> remember me
+                    @*<input name="RememberMe" type="hidden" value="false"/>*@
+                    @*@Html.CheckBoxFor(m => m.RememberMe, new { @checked="checked" }) remember me*@
+                </label>
+            </span>
+    <span class="form-group">
+        <button class="btn btn-default">LOG IN</button>
+    </span>
+        }
+
+        @*</form>*@
+
+
+        <!-- password forgot -->
+        <a class="forgot_passowrd" href="password.html">forgot your password?</a>
+
+    </div><!-- /login dropdown -->
+</div>
+<!-- /login -->

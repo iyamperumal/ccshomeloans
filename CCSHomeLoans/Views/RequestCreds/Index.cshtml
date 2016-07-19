@@ -1,0 +1,262 @@
+﻿@model IEnumerable<CcsData.Models.CreditPull.RequestCred>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RECEIVING_PARTY_Identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBMITTING_PARTY_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBMITTING_PARTY_Identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_Format)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_FormatOtherDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREFERRED_RESPONSE_UseEmbeddedFileIndicator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDatetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InternalAccountIdentifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginAccountIdentifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginAccountPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditRequestID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REQUEST_DATA_BorrowerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditReportIdentifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditReportRequestActionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditReportType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditRequestDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditRequestType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISMOVersionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LenderCaseIdentifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestingPartyRequestedByName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquifaxIndicator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExperianIndicator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransUnionIndicator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BorrowerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameSuffix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgeAtApplicationYears)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrintPositionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaritalStatusType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BorrowerResidencyType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exeption)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RECEIVING_PARTY_Identifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBMITTING_PARTY_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBMITTING_PARTY_Identifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREFERRED_RESPONSE_Format)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREFERRED_RESPONSE_FormatOtherDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREFERRED_RESPONSE_UseEmbeddedFileIndicator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDatetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InternalAccountIdentifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginAccountIdentifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginAccountPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditRequestID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REQUEST_DATA_BorrowerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditReportIdentifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditReportRequestActionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditReportType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditRequestDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditRequestType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISMOVersionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LenderCaseIdentifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestingPartyRequestedByName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquifaxIndicator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperianIndicator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransUnionIndicator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BorrowerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameSuffix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgeAtApplicationYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrintPositionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaritalStatusType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BorrowerResidencyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exeption)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RequestCred_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RequestCred_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RequestCred_Id })
+        </td>
+    </tr>
+}
+
+</table>

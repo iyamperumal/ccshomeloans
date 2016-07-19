@@ -1,0 +1,142 @@
+﻿@model CcsData.ViewModels.MortgageVM
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>MortgageVM</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Mortgage_Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Balance, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Balance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Balance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OriginationDate, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.OriginationDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OriginationDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimatedMarketValue, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.EstimatedMarketValue, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EstimatedMarketValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CashOutAmountRequested, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.CashOutAmountRequested, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CashOutAmountRequested, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MonthlyPayment, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.MonthlyPayment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MonthlyPayment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PymtIncludesInsurance, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.PymtIncludesInsurance, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PymtIncludesInsurance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PymtIncludesTaxes, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.PymtIncludesTaxes, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PymtIncludesTaxes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.YearlyPropertyTaxes, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.YearlyPropertyTaxes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.YearlyPropertyTaxes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.YearlyHomeInsurancePayment, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.YearlyHomeInsurancePayment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.YearlyHomeInsurancePayment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MonthlyMortgageInsurance, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.MonthlyMortgageInsurance, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MonthlyMortgageInsurance, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InterestRate, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.InterestRate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.InterestRate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InterestRateType, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.InterestRateType, new { @class = "form-control input-lg" })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.InterestRateType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Term, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Term, new { @class = "form-control input-lg" })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.Term, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-8">
+                <div class="col-md-12">
+                    <input type="submit" value="Run Saving Analysis" class="btn btn-lg btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*section Scripts {
+   Scripts.Render("~/bundles/jqueryval")
+}*@

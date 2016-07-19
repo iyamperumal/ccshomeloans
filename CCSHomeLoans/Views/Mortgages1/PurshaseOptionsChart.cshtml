@@ -1,0 +1,234 @@
+﻿@model IEnumerable<CcsData.Models.PurchaseOptionSelected>
+
+@{
+    ViewBag.Title = "RifiOption";
+    Layout = "~/Views/Shared/_LayoutKendoAll.cshtml";
+}
+
+
+<div class="angScope" ng-controller="purOptionsController">
+
+    @*<style>
+            .k-chart {
+                /*height: 400px;
+                padding: 37px;
+                margin: 0 0 50px 0;*/
+                width: 100%;
+            }
+
+            #chat2 {
+                width: 100%;
+            }
+        </style>*@
+
+    <div class="row">
+        <div class="col-md-12">
+
+            @(Html.Kendo().Chart()
+        .Name("chart2")
+        .Title("Options")
+        .Legend(legend => legend
+            .Visible(false)
+
+        )
+        .ChartArea(chartArea => chartArea
+            .Background("transparent")
+        )
+        .Series(series =>
+        {
+            //series.Bar(new double[] { 56000, 63000, 74000, 91000, 117000, 138000 }).Name("Total Visits");
+            //series.Bar(new double[] { 52000, 34000, 23000, 48000, 67000, 83000 }).Name("Unique visitors");
+            List<decimal> payments = new List<decimal>();
+            List<decimal> cashRequired = new List<decimal>();
+
+            foreach (var item in Model)
+            {
+                //series.Bar(new decimal[]{(decimal)item.MonthlyPaymentPrincipalInterest, item.CashRequiredForClosing})
+                payments.Add((decimal)item.MonthlyPaymentPrincipalInterest);
+                cashRequired.Add((decimal)item.CashRequiredForClosing);
+            }
+            series.Bar(payments.ToArray()).Name("PI").Gap(0.3).Spacing(0.1);
+            series.Bar(cashRequired.ToArray()).Name("Funds Required").Gap(0.3).Spacing(0.1);
+
+
+        })
+        .CategoryAxis(axis => axis
+            .Categories("Option1", "Option2")
+            .MajorGridLines(lines => lines.Visible(false))
+        )
+        .ValueAxis(axis => axis
+            .Numeric()
+            .Max(3000)
+            .Line(line => line.Visible(false))
+            .MajorGridLines(lines => lines.Visible(true))
+        )
+        .Tooltip(tooltip => tooltip
+            .Visible(true)
+            .Template("#= series.name #: #= value #")
+        )
+            )
+
+        </div>
+
+    </div>
+
+    <div class="ng-cloak">
+
+        <article>
+            <div class="alert alert-link">
+                <p>
+                    {{data[0].PreparedFor}},
+                </p>
+                <p>In short, you will save approx. <strong>${{data[0].Hl_MonthlySavings | number:2}} </strong>  per month. The easiest way to see the financial savings is to look at the number of payments eliminated by refinancing and continuing to make the same payment as you have now.</p>
+
+                <p><strong>This loan has a financial savings of ${{data[0].Hl_TotalSavingsFromOldMortgageToNewMortgage | number:2}}. </strong> By continuing to make the same payment you have now, you will eliminate <strong>{{data[0].Hl_MonthlyPaymentsEliminated}} payments off of the {{data[0].Hl_MonthsPaidRemaining}} payments</strong> remaining on your current mortgage. Thus leaving only 81 payments to remaining.</p>
+
+                <p>If you need any assistance in explaining the reports please allow us the opportunity to help you by calling our Customer Service Center at 1-800-565-2390 Monday - Friday 9:00 AM - 7:00 PM</p>
+            </div>
+        </article>
+
+        <div class="col-md-4 price-table {{i.Hilited}}" ng-repeat="i in data">
+
+            @*<h3><strong>$ {{i.LoanAmount | number:3 }}</strong></h3>*@
+            <h3><strong>{{i.TermInYears}} Years at {{i.InterestRate | number:3}} %</strong></h3>
+            <p>
+                <strong>
+                    {{i.MonthlyPaymentPrincipalInterest | number: 2}}
+                </strong>
+                <span>PER MONTH</span>
+                <span>{{i.APR | number:3}} % APR</span>
+            </p>
+            <ul>
+
+                <li>Monthly Mortgage Insurance: $ {{i.MonthlyMortgageInsurance | number:2}}</li>
+                <li>Estimated Monthly Homeowner Insurance: $ {{i.MonthlyHomeownersInsurance | number:2}}</li>
+                <li>Estimated Monthly property taxes: $ {{i.MonthlyPropertyTaxes | number:2}}</li>
+                <li>Estimated Homeowner Association Fees: $ {{i.MonthlyHomeownerAssociationFees | number:2}}</li>
+                <li>Total Mortgage Payment: <strong>$ {{i.TotalMortgagePayment | number:2}}</strong></li>
+                <li>Cash Required For Closing: <strong>$ {{i.CashRequiredForClosing | number:2}}</strong></li>
+
+
+            </ul>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="success" data-toggle="collapse" data-parent="#accordion" ng-href="#collapse{{i.OptIntex}}">
+                                <strong>Closing Cost Summary</strong>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="{{'collapse' + i.OptIntex}}" class="panel-collapse collapse out">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Purchase Price: $ {{i.PurchasePrice | number:2}}</li>
+                                <li>Estimated Prepaid Items: $ {{i.EstimatePrepaidItems | number:2}}</li>
+                                <li>Estimated Closing Cost: $ {{i.EstimatedClosingCost | number:2}}</li>
+                                <li>PMI, MIP, Funding Fee: $ {{i.PMI_MIP_FundingFee | number:2}}</li>
+                                <li>Discount (Rate Buy Down): $ {{i.DiscoutRateBuyDown | number:2}}</li>
+                                <li>Total Cost: $ {{i.TotalCostToPuchase | number:2}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="success" data-toggle="collapse" data-parent="#accordion" href="#collapseb{{i.OptIntex}}">
+                                <strong>Closing Cost Credits</strong>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="{{'collapseb' + i.OptIntex}}" class="panel-collapse collapse out">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Less Down Payment: $ {{i.DownPayment | number:2}}</li>
+                                <li>Less Seller Paid Closing Cost: $ {{i.SellerPaidClosingCost | number:2}}</li>
+                                <li>Less New Loan Amount: $ {{i.LoanAmount | number:2}}</li>
+                                <li>Cash Required For Closing: $ {{i.CashRequiredForClosing | number:2}}</li>
+
+                            </ul>
+                            @*======================*@
+
+                            <div class="col-md-12">
+
+                                @(Html.Kendo().Chart()
+        .Name("chart")
+        .Title("Options")
+        .Legend(legend => legend
+            .Visible(false)
+
+        )
+        .ChartArea(chartArea => chartArea
+            .Background("transparent")
+        )
+        .Series(series =>
+        {
+            //series.Bar(new double[] { 56000, 63000, 74000, 91000, 117000, 138000 }).Name("Total Visits");
+            //series.Bar(new double[] { 52000, 34000, 23000, 48000, 67000, 83000 }).Name("Unique visitors");
+            List<decimal> payments = new List<decimal>();
+            List<decimal> cashRequired = new List<decimal>();
+
+            foreach (var item in Model)
+            {
+                //series.Bar(new decimal[]{(decimal)item.MonthlyPaymentPrincipalInterest, item.CashRequiredForClosing})
+                payments.Add((decimal)item.MonthlyPaymentPrincipalInterest);
+                cashRequired.Add((decimal)item.CashRequiredForClosing);
+            }
+            series.Bar(payments.ToArray()).Name("PI").Gap(0.3).Spacing(0.1);
+            series.Bar(cashRequired.ToArray()).Name("Funds Required").Gap(0.3).Spacing(0.1);
+
+
+        })
+        .CategoryAxis(axis => axis
+            .Categories("Option1", "Option2")
+            .MajorGridLines(lines => lines.Visible(false))
+        )
+        .ValueAxis(axis => axis
+            .Numeric()
+            .Max(3000)
+            .Line(line => line.Visible(false))
+            .MajorGridLines(lines => lines.Visible(true))
+        )
+        .Tooltip(tooltip => tooltip
+            .Visible(true)
+            .Template("#= series.name #: #= value #")
+        )
+                                )
+
+
+
+
+                            </div>
+
+
+
+
+
+                            @* ==========================*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-success btn-lg" ng-click="optionSelected(i, $wij)">Select</a>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/ccsApp.js")
+    @Scripts.Render("~/Scripts/ccsPur.js")
+
+}

@@ -1,0 +1,163 @@
+﻿@model CcsData.Models.CreditPull.CreditMortgage
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditMortgage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Applicant.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Applicant.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponseCred.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResponseCred.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Whose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Whose)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sourse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sourse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late30)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late30)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late30Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late30Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late60)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late60)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late60Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late60Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late90)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late90)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Late90Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Late90Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOpened)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOpened)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HiCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HiCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Term)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthsRemaining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthsRemaining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CreditMortgage_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

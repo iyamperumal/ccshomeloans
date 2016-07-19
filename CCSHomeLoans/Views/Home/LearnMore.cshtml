@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Learn More";
+}
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background:url('/Content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                <br /> <span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>LEARN MORE</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>Learn More</li>
+                @*<li>Coventional Mortgage Loans</li>*@
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- Coventional Mortgage Loans -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Intelligent Automated Loan Technology</h2>
+            </header>
+
+            <h3 class="subtitle">
+                Smart Loans for Smart Consumers
+            </h3>
+            <article>
+                <p>
+                    Refinancing or purchasing a home? Our Intelligent loan
+                    engine will simplify the process by identifying the best terms all within
+                    seconds. Once you select the loan option, CCSHomeloans.com will complete your
+                    loan request from start to finish usually within weeks.
+                </p>
+                <p>
+                    We have closed and funded over 5000 loans and have an A+ Rating with the Better Business Bureau.  Find the right loan for you with in minutes <span class="learn_more">or @Html.ActionLink("Apply Now", "Create", "Applications4")</span>
+                </p>
+
+            </article>
+
+        </div>
+    </section>
+
+
+
+
+</div>
+

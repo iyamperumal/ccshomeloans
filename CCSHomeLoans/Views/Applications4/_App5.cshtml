@@ -1,0 +1,124 @@
+﻿@model CcsData.ViewModels.App5
+
+
+<article id="app5">
+
+    @using (Ajax.BeginForm("App5", "Applications4", null, new AjaxOptions { HttpMethod = "post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "app", OnBegin = "appBegin", OnSuccess = "app5Success", LoadingElementId = "waiting", LoadingElementDuration = 600 }, new { @class = "form-horizontal bigForm" }))
+    {
+
+        if (!Request.IsAuthenticated)
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-sm-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-12">
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-sm-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-12">
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EmailAddress, htmlAttributes: new { @class = "control-label col-sm-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-12">
+                        @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Passwordr, htmlAttributes: new { @class = "control-label col-sm-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.Passwordr, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-12">
+                        @Html.ValidationMessageFor(model => model.Passwordr, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ConfirmPasswordr, htmlAttributes: new { @class = "control-label col-sm-4" })
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.ConfirmPasswordr, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="col-sm-12">
+                        @Html.ValidationMessageFor(model => model.ConfirmPasswordr, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-sm-4" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                <div class="col-sm-6">
+                    <button id="prevbtn" type="submit" name="BtnPrevious" class="cancel btn btn-default btn-lg">Back <i class="fa fa-angle-double-left"></i></button>
+                    <button id="nextbtn" type="submit" name="BtnNext" class="btn btn-primary btn-lg">Next <i class="fa fa-angle-double-right"></i></button>
+                </div>
+            </div>
+        </div>
+    }
+
+</article>

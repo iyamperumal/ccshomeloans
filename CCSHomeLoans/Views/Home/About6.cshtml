@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "About6";
+}
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background: url('/content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                <br /><span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>OUR LENDERS</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+                <li>Our Lenders</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- Our Lenders -->
+    <section>
+        <div class="container">
+
+            <header>
+                <h2 class="styleColor">Our Mortgage Lenders &amp; Financial Institutions</h2>
+            </header>
+
+            <h3 class="subtitle">The National Mortgage Lenders We Represent</h3>
+            <article>
+                <p>
+                    “We are contracted to obtain wholesale/discounted pricing and rates with several National Mortgage A+ rated Lenders for our clients.”
+                </p>
+                <p>
+                    Our participating lenders are committed to providing us with lower than average interest rates for our clients. For additional information regarding the lenders we use, please contact your loan originator. 
+                </p>
+                <p>
+                    After 15 years of Business and over 5000 closed and funded loans, our clients rate us A+ as verified by the Better Buiness Bureau.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+</div>

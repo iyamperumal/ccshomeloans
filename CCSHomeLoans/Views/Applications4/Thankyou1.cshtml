@@ -1,0 +1,63 @@
+﻿@model CcsWeb.Models.ThankyouApply
+
+
+
+<div id="wrapper">
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" style="background:url('/Content/images/page-title.jpg') center top;">
+        <!-- for no background image, remove: style="background:url('assets/images/page-title.jpg') center top;" -->
+        <span class="raster hover"><!-- raster --></span>
+
+        <div class="container">
+
+            <!-- APPLY BUTTON -->
+            <div class="button-apply">
+                @Html.ActionLink("Apply Now", "App1", "Applications4", null, new { @class = "btn btn-lg btn-primary black" })
+                 <br /><span class="learn_more">or @Html.ActionLink("Learn more", "LearnMore", "Home")</span>
+            </div>
+
+            <!-- PAGE TITLE -->
+            <header>
+                <h1>WHY USE CCS?</h1>
+                <p>A Consumer Driven Instant Multiple Loan Quote Engine</p>
+            </header>
+
+            <!-- BREADCRUMBS - PAGE LOCATOR -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>About Us</li>
+                <li>Why Use CCS?</li>
+            </ol>
+
+        </div>
+    </section>
+    <!-- /PAGE TITLE -->
+    <!-- Why Use CCS? -->
+    <section>
+        <div class="container">
+
+            @*<header>
+                <h2 class="styleColor">Thank you..</h2>
+            </header>*@
+
+            <h3 class="styleColor subtitle">Thank you</h3>
+            <article>
+                <p>
+                    Thank you for submitting your loan application for @Model.LoanType. We are currently updating our loan engine and will have a member of our loan team call you and email you with the pre approval/loan savings summary shortly. 
+                </p>
+                <p>
+                    Please feel free to make direct contact with our loan agents at 1-800-565-2390 to answer any questions you have or to expedite your loan request. 
+                </p>
+                <p>
+                    Sincerely,<br />
+                    CCS Home Loans
+
+                </p>
+             
+            </article>
+
+        </div>
+    </section>
+
+</div>

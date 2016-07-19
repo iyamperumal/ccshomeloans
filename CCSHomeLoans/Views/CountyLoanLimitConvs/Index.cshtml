@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@(Html.Kendo().Grid<CcsData.Models.CountyLoanLimitConv>()
+        .Name("CountyLoanLimitConvGrid")
+        .Scrollable()
+        .HtmlAttributes(new { Style = "height:600px" })
+        .Resizable(resize => resize.Columns(true))
+        .Reorderable(reorder => reorder.Columns(true))
+        .Sortable()
+        .Pageable()
+        .DataSource(datasource => datasource
+                .Ajax()
+                .PageSize(10)
+                .Model(model => model.Id(c => c.CountyLoanLimitConv_Id))
+                .Read(read => read.Action("GetCountyLoanLimitConvs", "CountyLoanLimitConvsController"))
+                .Update(update => update.Action("EditingInline_Update", "CountyLoanLimitConvsController"))
+                )
+        .Editable(editable => editable.Mode(GridEditMode.InCell))
+        .Columns(columns =>
+        {
+            columns.Command(command => { command.Edit().UpdateText("Save").CancelText("Back"); }).Locked(true).Lockable(true).Width(120);
+            columns.Bound(model => model.State).Width(120);
+            columns.Bound(model => model.County).Width(120);
+            columns.Bound(model => model.Fips).Width(120);
+            columns.Bound(model => model.LoanLimit1Unit).Width(150);
+            columns.Bound(model => model.LoanLimit2Unit).Width(150);
+            columns.Bound(model => model.LoanLimit3Unit).Width(150);
+            columns.Bound(model => model.LoanLimit4Unit).Width(150);
+        })
+)

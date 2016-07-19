@@ -1,0 +1,153 @@
+﻿@model CcsWeb.Models.DocFileVM
+@{
+    ViewBag.Title = "UploadDocs";
+    Layout = "~/Views/Shared/_LayoutKendo.cshtml";
+}
+
+
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <h3 class="text-center">
+            Upload Required Documents
+        </h3>
+        <h2>
+            Instructions:
+        </h2>
+        <p>
+            Please gather all applicable items identified below to securely upload to complete your loan application. If you do not have all of the necessary items at this time, please upload what you have now. You may always return at a later date if necessary to upload the remaining items.
+        </p>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-md-6">
+        <h2>
+            Employed Co/Borrowers
+        </h2>
+        <p></p>
+        <div>
+            <ol>
+                <li class="MsoNormal">
+                    Last 2 Years Tax Returns (All Pages, Signed)
+                </li>
+                <li class="MsoNormal">
+                    Last 2 Years W2’s
+                </li>
+                <li class="MsoNormal">
+                    1 Months Pay-stubs
+                </li>
+                <li class="MsoNormal">
+                    Last 2 Months Banks Statements (All Pages)
+                </li>
+                <li class="MsoNormal">
+                    Social Security Awards Letters
+                </li>
+                <li class="MsoNormal">
+                    Pension/Retirement Awards Letters
+                </li>
+                <li class="MsoNormal">
+                    Rental Income (Signed Leases)
+                </li>
+                <li class="MsoNormal">
+                    Investments (401k, Stocks, Bonds)
+                </li>
+                <li class="MsoNormal">
+                    Copy of Homeowners Insurance (If Refinance)
+                </li>
+                <li class="MsoNormal">
+                    Copy of Real Estate Sales Contract (If Purchase)
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="col-md-6 column">
+        <h2>
+            Self Employed Co/Borrowers
+        </h2>
+        <p></p>
+        <ol>
+            <li class="MsoNormal">
+                Last 2 Years Personal Tax Returns (All Pages, All Schedules, Signed)
+            </li>
+            <li class="MsoNormal">
+                Last 2 Years Business Tax Returns (All Pages, All Schedules, Signed)
+            </li>
+            <li class="MsoNormal">
+                Current YTD Profit &amp; Loss Statements (Signed &amp; Dated)
+            </li>
+            <li class="MsoNormal">
+                Copy of Business License
+            </li>
+            <li class="MsoNormal">
+                Last 2 Months Personal Banks Statements (All Pages)
+            </li>
+            <li class="MsoNormal">
+                Social Security Awards Letters
+            </li>
+            <li class="MsoNormal">
+                Pension/Retirement Awards Letters
+            </li>
+            <li class="MsoNormal">
+                Rental Income (Signed Leases)
+            </li>
+            <li class="MsoNormal">
+                Investments (401k, Stocks, Bonds)
+            </li>
+            <li class="MsoNormal">
+                Copy of Homeowners Insurance (If Refinance)
+            </li>
+        </ol>
+
+        <p>
+            <a class="btn" href="#"></a>
+        </p>
+    </div>
+</div>
+<div class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <strong>Well done!</strong> @ViewBag.uploadMesaage
+</div>
+<div class="col-md-8">
+
+    @using (Html.BeginForm("UploadDocs", "Documents", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal bigForm" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+
+            <div class="col-sm-12">
+                @Html.EnumDropDownListFor(model => model.DocFileType, "Select File Type", new { @class = "form-control input-lg" })
+                <div class="col-sm-12">
+                    @Html.ValidationMessageFor(model => model.DocFileType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="background-color:#f5f5f5" class="form-group">
+
+            @(Html.Kendo().Upload()
+    .Name("BaseFile")
+            )
+
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" , placeholder="Add Notes" id="Note" name="Note" rows="3"></textarea>
+
+            @*Html.TextAreaFor(model => model.Note, new { htmlAttributes = new { @class = "form-control", @placeholder = "Add Notes" } })*@
+
+        </div>
+
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload" class="btn btn-default" />
+        </div>
+    </div>
+
+
+
+    }
+
+</div>

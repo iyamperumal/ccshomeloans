@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19CF1CEF-8E30-4923-AAED-7830CB0617D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CcsData</RootNamespace>
+    <AssemblyName>CcsData</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AdditionalIncome.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Applicant.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\Asset.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BankAccount.cs" />
+    <Compile Include="Models\BankruptcyChapterEnum.cs" />
+    <Compile Include="Models\CallLog.cs" />
+    <Compile Include="Models\CashOutTypeEnum.cs" />
+    <Compile Include="Models\ClientDenialReasonEnum.cs" />
+    <Compile Include="Models\ClientRefuseReasonEnum.cs" />
+    <Compile Include="Models\CoApplicant.cs" />
+    <Compile Include="Models\CoEmployment.cs" />
+    <Compile Include="Models\ConditionTypeEnum.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ContructionTypeEnum.cs" />
+    <Compile Include="Models\CountyLoanLimit.cs" />
+    <Compile Include="Models\CountyLoanLimitConv.cs" />
+    <Compile Include="Models\CountyLoanLimitFHA.cs" />
+    <Compile Include="Models\CountyLoanLimitVA.cs" />
+    <Compile Include="Models\Credit.cs" />
+    <Compile Include="Models\CreditMortgageTypeEnum.cs" />
+    <Compile Include="Models\CreditPull\CreditAccountTypeEnum.cs" />
+    <Compile Include="Models\CreditPull\CreditEnums.cs" />
+    <Compile Include="Models\CreditPull\CreditLiability.cs" />
+    <Compile Include="Models\CreditPull\CreditMortgage.cs" />
+    <Compile Include="Models\CreditPull\Inquiry.cs" />
+    <Compile Include="Models\CreditPull\Lates.cs" />
+    <Compile Include="Models\CreditPull\PublicRecord.cs" />
+    <Compile Include="Models\CreditPull\RequestCred.cs" />
+    <Compile Include="Models\CreditPull\RequestParam.cs" />
+    <Compile Include="Models\CreditPull\ResponseCred.cs" />
+    <Compile Include="Models\CreditPull\ResponseData.cs" />
+    <Compile Include="Models\CreditRatingEnum.cs" />
+    <Compile Include="Models\CreditRatingReasonEnum.cs" />
+    <Compile Include="Models\CreditScoreEstimateEnum.cs" />
+    <Compile Include="Models\CustomerServiceRatingEnum.cs" />
+    <Compile Include="Models\DaysLateEnum.cs" />
+    <Compile Include="Models\DispositionEnum.cs" />
+    <Compile Include="Models\DocFileTypeEnum.cs" />
+    <Compile Include="Models\Employer.cs" />
+    <Compile Include="Models\Employment.cs" />
+    <Compile Include="Models\EmploymentTypeEnum.cs" />
+    <Compile Include="Models\EnumNorm.cs" />
+    <Compile Include="Models\FiledBankruptcyTypeEnum.cs" />
+    <Compile Include="Models\FileUpload\ApplicantDoc.cs" />
+    <Compile Include="Models\FileUpload\DocFile.cs" />
+    <Compile Include="Models\FloridaTaxReserve.cs" />
+    <Compile Include="Models\Foreclosure.cs" />
+    <Compile Include="Models\ForeclosuresShortSaleDeedinLieuEnum.cs" />
+    <Compile Include="Models\GarageSizeEnum.cs" />
+    <Compile Include="Models\HaveSecondMortgageEnum.cs" />
+    <Compile Include="Models\IncomeTypeEnum.cs" />
+    <Compile Include="Models\InterestRateTypeEnum.cs" />
+    <Compile Include="Models\LeadData.cs" />
+    <Compile Include="Models\LenderDenialReasonEnum.cs" />
+    <Compile Include="Models\LenderRefuseReasonEnum.cs" />
+    <Compile Include="Models\LetterTypeEnum.cs" />
+    <Compile Include="Models\Liability.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanOfficer.cs" />
+    <Compile Include="Models\LoanProcessor.cs" />
+    <Compile Include="Models\LoanProgram.cs" />
+    <Compile Include="Models\LoanStage.cs" />
+    <Compile Include="Models\LoanStageEnum.cs" />
+    <Compile Include="Models\LoanTypeEnum.cs" />
+    <Compile Include="Models\LoanTypeRequestedEnum.cs" />
+    <Compile Include="Models\LocationTypeEnum.cs" />
+    <Compile Include="Models\MaintenanceTypeEnum.cs" />
+    <Compile Include="Models\Maritalstatus.cs" />
+    <Compile Include="Models\MonthsEnum.cs" />
+    <Compile Include="Models\Mortgage.cs" />
+    <Compile Include="Models\MortgageProgramOptionsEnum.cs" />
+    <Compile Include="Models\MortgageTermEnum.cs" />
+    <Compile Include="Models\MotiveEnum.cs" />
+    <Compile Include="Models\NewMortgage.cs" />
+    <Compile Include="Models\NumberOfUnitsEnum.cs" />
+    <Compile Include="Models\Options.cs" />
+    <Compile Include="Models\OptionSelected.cs" />
+    <Compile Include="Models\OwnerShipLongevityEnum.cs" />
+    <Compile Include="Models\OwnershipTypeEnum.cs" />
+    <Compile Include="Models\PayScheduleEnum.cs" />
+    <Compile Include="Models\PrepaymentEnum.cs" />
+    <Compile Include="Models\Property.cs" />
+    <Compile Include="Models\PropertyTypeEnum.cs" />
+    <Compile Include="Models\ProspectEnum.cs" />
+    <Compile Include="Models\PurchaseOption.cs" />
+    <Compile Include="Models\PurchaseOptionSelected.cs" />
+    <Compile Include="Models\Realtor.cs" />
+    <Compile Include="Models\RefiOption.cs" />
+    <Compile Include="Models\Representative.cs" />
+    <Compile Include="Models\RunTimeModels\RatePricing.cs" />
+    <Compile Include="Models\ScheduleTypeEnum.cs" />
+    <Compile Include="Models\SecondMortgage.cs" />
+    <Compile Include="Models\SecondMortgageRateTypeEnum.cs" />
+    <Compile Include="Models\SecondMortgageTermEnum.cs" />
+    <Compile Include="Models\Seller.cs" />
+    <Compile Include="Models\SiteRatingEnum.cs" />
+    <Compile Include="Models\SiteStat.cs" />
+    <Compile Include="Models\Testimonial.cs" />
+    <Compile Include="Models\UsdaCountiesAndIncome.cs" />
+    <Compile Include="Models\UsState.cs" />
+    <Compile Include="Models\UsStateEnum.cs" />
+    <Compile Include="Models\UsStateEnumBack.cs" />
+    <Compile Include="Models\Variable.cs" />
+    <Compile Include="Models\VariableBackup.cs" />
+    <Compile Include="Models\VariableCust.cs" />
+    <Compile Include="Models\YearsEnum.cs" />
+    <Compile Include="Models\YesNoAns.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddressVM.cs" />
+    <Compile Include="ViewModels\App1.cs" />
+    <Compile Include="ViewModels\App2.cs" />
+    <Compile Include="ViewModels\App3.cs" />
+    <Compile Include="ViewModels\App4.cs" />
+    <Compile Include="ViewModels\App5.cs" />
+    <Compile Include="ViewModels\ApplicantVm.cs" />
+    <Compile Include="ViewModels\EmploymentVM.cs" />
+    <Compile Include="ViewModels\LeadSheetVM.cs" />
+    <Compile Include="ViewModels\MortgageApp1003.cs" />
+    <Compile Include="ViewModels\MortgageVM.cs" />
+    <Compile Include="ViewModels\OptionVM.cs" />
+    <Compile Include="ViewModels\PreApp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

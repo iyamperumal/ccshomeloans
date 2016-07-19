@@ -1,0 +1,7 @@
+﻿@model Double?
+<div class="col-sm-6 input-group" style="padding-left: 16px; padding-right: 16px;" >
+    @*<span class='percent-symbol'>%</span>*@
+    @Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, new { @class = "form-control input-lg percent" })
+    <span class="input-group-addon">%</span>
+</div>
+

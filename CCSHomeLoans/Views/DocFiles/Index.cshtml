@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CcsData.Models.FileUpload.DocFile>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageApplicant.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocFileType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageApplicant.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocFileType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DocFile_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DocFile_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DocFile_Id })
+        </td>
+    </tr>
+}
+
+</table>
